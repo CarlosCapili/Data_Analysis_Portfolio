@@ -128,8 +128,6 @@
 -- 	AND total_sales IS NOT NULL
 -- ORDER BY release_date, title, total_sales DESC;
 
--- What titles are popular in one region but flop in another
-
 -- Top Rockstar Games games based on sales
 
 -- What is Call of Duty has the highest sales from Activision and who is the developer?
@@ -154,23 +152,36 @@
 -- ORDER BY publisher, title;
 
 -- For each region display the game with the highest sales for each year
-SELECT
-	title,
-	publisher,
-	EXTRACT(YEAR FROM release_date) AS release_year,
-	SUM(na_sales) AS total_na_sales,
-	SUM(jp_sales) AS total_jp_sales,
-	SUM(pal_sales) AS total_pal_sales,
-	SUM(other_sales) AS total_other_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-	AND na_sales IS NOT NULL
-	AND jp_sales IS NOT NULL
-	AND pal_sales IS NOT NULL
-	AND other_sales IS NOT NULL
-GROUP BY title, publisher, EXTRACT(YEAR FROM release_date)
-ORDER BY release_year 
+WITH total_sales_region (	
+	SELECT
+		title,
+		publisher,
+		EXTRACT(YEAR FROM release_date) AS release_year,
+		SUM(na_sales) AS total_na_sales,
+		SUM(jp_sales) AS total_jp_sales,
+		SUM(pal_sales) AS total_pal_sales,
+		SUM(other_sales) AS total_other_sales
+	FROM vg_sales
+	WHERE total_sales IS NOT NULL
+		AND na_sales IS NOT NULL
+		AND jp_sales IS NOT NULL
+		AND pal_sales IS NOT NULL
+		AND other_sales IS NOT NULL
+	GROUP BY title, publisher, EXTRACT(YEAR FROM release_date)
+	ORDER BY release_year, title
+)
 
+SELECT
+	release_year AS year,
+	CASE
+		WHEN total_na_sales >= total_jp_sales AND total_na_sales >= total_pal_sales AND total_na_sales >= total_other_sales THEN 'North America'
+		WHEN total_jp_sales >= total_na_sales AND total_jp_sales >= total_pal_sales AND total_jp_sales >= total_other_sales THEN 'Japan'
+		WHEN total_pal_sales >= total_na_sales AND total_pal_sales >= total_jp_sales AND total_pal_sales >= total_other_sales THEN 'Europe and Africa'
+		WHEN total_other_sales >= total_na_sales AND total_other_sales >= total_jp_sales AND total_other_sales >= total_pal_sales THEN 'Rest of World'
+		ELSE 'Cannot be determined' 
+	WHEN 
+FROM total_sales_region
+GROUP BY release_year
 
 -- For each game display the region with the highest sales
 -- WITH sales_per_region AS (
@@ -202,6 +213,7 @@ ORDER BY release_year
 -- 	END AS highest_sale_region
 -- FROM sales_per_region
 
+-- What titles are popular in one region but flop in another
 
 
 -- SELECT *
