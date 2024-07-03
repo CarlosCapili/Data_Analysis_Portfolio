@@ -151,37 +151,33 @@
 -- 	AND other_sales IS NOT NULL
 -- ORDER BY publisher, title;
 
--- For each region display the game with the highest sales for each year
-WITH total_sales_region (	
-	SELECT
-		title,
-		publisher,
-		EXTRACT(YEAR FROM release_date) AS release_year,
-		SUM(na_sales) AS total_na_sales,
-		SUM(jp_sales) AS total_jp_sales,
-		SUM(pal_sales) AS total_pal_sales,
-		SUM(other_sales) AS total_other_sales
-	FROM vg_sales
-	WHERE total_sales IS NOT NULL
-		AND na_sales IS NOT NULL
-		AND jp_sales IS NOT NULL
-		AND pal_sales IS NOT NULL
-		AND other_sales IS NOT NULL
-	GROUP BY title, publisher, EXTRACT(YEAR FROM release_date)
-	ORDER BY release_year, title
-)
+-- For each region display the game with the highest sales for each year -- IN PROGRESS
+-- WITH total_sales_region AS (
+-- 	SELECT
+-- 		title,
+-- 		publisher,
+-- 		EXTRACT(YEAR FROM release_date) AS release_year,
+-- 		SUM(na_sales) AS total_na_sales,
+-- 		SUM(jp_sales) AS total_jp_sales,
+-- 		SUM(pal_sales) AS total_pal_sales,
+-- 		SUM(other_sales) AS total_other_sales
+-- 	FROM vg_sales
+-- 	WHERE total_sales IS NOT NULL
+-- 		AND na_sales IS NOT NULL
+-- 		AND jp_sales IS NOT NULL
+-- 		AND pal_sales IS NOT NULL
+-- 		AND other_sales IS NOT NULL
+-- 	GROUP BY title, publisher, EXTRACT(YEAR FROM release_date)
+-- 	ORDER BY release_year, title
+-- )
 
-SELECT
-	release_year AS year,
-	CASE
-		WHEN total_na_sales >= total_jp_sales AND total_na_sales >= total_pal_sales AND total_na_sales >= total_other_sales THEN 'North America'
-		WHEN total_jp_sales >= total_na_sales AND total_jp_sales >= total_pal_sales AND total_jp_sales >= total_other_sales THEN 'Japan'
-		WHEN total_pal_sales >= total_na_sales AND total_pal_sales >= total_jp_sales AND total_pal_sales >= total_other_sales THEN 'Europe and Africa'
-		WHEN total_other_sales >= total_na_sales AND total_other_sales >= total_jp_sales AND total_other_sales >= total_pal_sales THEN 'Rest of World'
-		ELSE 'Cannot be determined' 
-	WHEN 
-FROM total_sales_region
-GROUP BY release_year
+-- SELECT
+-- 	release_year,
+-- 	title,
+-- 	publisher,
+-- 	total_na_sales
+-- FROM total_sales_region
+
 
 -- For each game display the region with the highest sales
 -- WITH sales_per_region AS (
@@ -215,6 +211,32 @@ GROUP BY release_year
 
 -- What titles are popular in one region but flop in another
 
+-- SALES BY PLATFORM
+
+-- What are the total sales by playform?
+-- SELECT
+-- 	console,
+-- 	SUM(total_sales) AS total_sales_console
+-- FROM vg_sales
+-- WHERE total_sales IS NOT NULL
+-- GROUP BY console
+-- ORDER BY total_sales_console DESC;
+
+-- Which platform has the highest overall sales?
+
+
+-- What is the best selling game per platform?
+SELECT
+	console,
+	title,
+	publisher,
+	SUM(total_sales) AS ts_across_consoles
+FROM vg_sales
+WHERE total_sales IS NOT NULL
+GROUP BY console, title, publisher
+ORDER BY ts_across_consoles DESC;
+
+-- Which platform has the most games in the top 10 best-sellers
 
 -- SELECT *
 -- FROM vg_sales
