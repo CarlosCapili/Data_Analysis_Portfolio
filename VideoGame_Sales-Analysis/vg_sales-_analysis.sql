@@ -213,30 +213,57 @@
 
 -- SALES BY PLATFORM
 
--- What are the total sales by playform?
+-- What are the total sales by platform?
 -- SELECT
 -- 	console,
--- 	SUM(total_sales) AS total_sales_console
+-- 	SUM(total_sales) AS total_platform_sales
 -- FROM vg_sales
 -- WHERE total_sales IS NOT NULL
 -- GROUP BY console
--- ORDER BY total_sales_console DESC;
-
--- Which platform has the highest overall sales?
-
+-- ORDER BY total_platform_sales DESC;
 
 -- What is the best selling game per platform?
+-- SELECT
+-- 	console,
+-- 	title,
+-- 	publisher,
+-- 	SUM(total_sales) AS ts_across_consoles
+-- FROM vg_sales
+-- WHERE total_sales IS NOT NULL
+-- GROUP BY console, title, publisher
+-- ORDER BY ts_across_consoles DESC;
+
+-- How have sales on each platform changed over time?
+WITH console_title_sales AS (
+	SELECT
+		EXTRACT(YEAR FROM release_date) as release_year,
+		console,
+		title,
+		publisher,
+		SUM(total_sales) as title_sales
+	FROM vg_sales
+	WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
+		AND total_sales IS NOT NULL
+	GROUP BY console, title, publisher, EXTRACT(YEAR FROM release_date)
+	ORDER BY release_year, console, title
+)
+
 SELECT
+	release_year,
 	console,
-	title,
-	publisher,
-	SUM(total_sales) AS ts_across_consoles
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-GROUP BY console, title, publisher
-ORDER BY ts_across_consoles DESC;
+	SUM(title_sales) as platform_sales
+FROM console_title_sales
+GROUP BY release_year, console
+ORDER BY console, release_year;
+
 
 -- Which platform has the most games in the top 10 best-sellers
+-- SELECT
+-- 	console,
+-- 	title,
+-- 	publisher,
+-- 	SUM(total_sales) AS ts_across_consoles
+	
 
 -- SELECT *
 -- FROM vg_sales
