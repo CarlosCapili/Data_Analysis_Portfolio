@@ -234,36 +234,36 @@
 -- ORDER BY ts_across_consoles DESC;
 
 -- How have sales on each platform changed over time?
-WITH console_title_sales AS (
-	SELECT
-		EXTRACT(YEAR FROM release_date) as release_year,
-		console,
-		title,
-		publisher,
-		SUM(total_sales) as title_sales
-	FROM vg_sales
-	WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
-		AND total_sales IS NOT NULL
-	GROUP BY console, title, publisher, EXTRACT(YEAR FROM release_date)
-	ORDER BY release_year, console, title
-)
+-- WITH console_title_sales AS (
+-- 	SELECT
+-- 		EXTRACT(YEAR FROM release_date) as release_year,
+-- 		console,
+-- 		title,
+-- 		publisher,
+-- 		SUM(total_sales) as title_sales
+-- 	FROM vg_sales
+-- 	WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
+-- 		AND total_sales IS NOT NULL
+-- 	GROUP BY console, title, publisher, EXTRACT(YEAR FROM release_date)
+-- 	ORDER BY release_year, console, title
+-- )
 
-SELECT
-	release_year,
-	console,
-	SUM(title_sales) as platform_sales
-FROM console_title_sales
-GROUP BY release_year, console
-ORDER BY console, release_year;
-
-
--- Which platform has the most games in the top 10 best-sellers
 -- SELECT
+-- 	release_year,
 -- 	console,
--- 	title,
--- 	publisher,
--- 	SUM(total_sales) AS ts_across_consoles
-	
+-- 	SUM(title_sales) as platform_sales
+-- FROM console_title_sales
+-- GROUP BY release_year, console
+-- ORDER BY console, release_year;
 
--- SELECT *
--- FROM vg_sales
+-- SALES BY GENRE
+
+-- What are the total sales by genre?
+SELECT
+	genre,
+	SUM(total_sales) AS total_genre_sales
+FROM vg_sales
+WHERE total_sales IS NOT NULL
+GROUP BY genre;
+
+
