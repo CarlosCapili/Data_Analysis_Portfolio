@@ -234,36 +234,24 @@
 -- ORDER BY ts_across_consoles DESC;
 
 -- How have sales on each platform changed over time?
--- WITH console_title_sales AS (
--- 	SELECT
--- 		EXTRACT(YEAR FROM release_date) as release_year,
--- 		console,
--- 		title,
--- 		publisher,
--- 		SUM(total_sales) as title_sales
--- 	FROM vg_sales
--- 	WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
--- 		AND total_sales IS NOT NULL
--- 	GROUP BY console, title, publisher, EXTRACT(YEAR FROM release_date)
--- 	ORDER BY release_year, console, title
--- )
-
--- SELECT
--- 	release_year,
--- 	console,
--- 	SUM(title_sales) as platform_sales
--- FROM console_title_sales
--- GROUP BY release_year, console
--- ORDER BY console, release_year;
+SELECT
+	EXTRACT(YEAR FROM release_date) AS release_year,
+	console,
+	SUM(total_sales)
+FROM vg_sales
+WHERE total_sales IS NOT NULL
+	AND EXTRACT(YEAR FROM release_date) IS NOT NULL
+GROUP BY EXTRACT(YEAR FROM release_date), console
+ORDER BY console, release_year;
 
 -- SALES BY GENRE
 
 -- What are the total sales by genre?
-SELECT
-	genre,
-	SUM(total_sales) AS total_genre_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-GROUP BY genre;
+-- SELECT
+-- 	genre,
+-- 	SUM(total_sales) AS total_genre_sales
+-- FROM vg_sales
+-- WHERE total_sales IS NOT NULL
+-- GROUP BY genre;
 
 
