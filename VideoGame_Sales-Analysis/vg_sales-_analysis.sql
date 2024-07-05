@@ -197,7 +197,7 @@ SELECT
 FROM vg_sales
 WHERE total_sales IS NOT NULL
 GROUP BY console, title, publisher
-ORDER BY ts_across_consoles DESC;
+ORDER BY console, ts_across_consoles DESC;
 
 -- How have sales on each platform changed over time?
 SELECT
@@ -230,6 +230,21 @@ WHERE total_sales IS NOT NULL
 	AND EXTRACT(YEAR FROM release_date) IS NOT NULL
 GROUP BY EXTRACT(YEAR FROM release_date), genre
 ORDER BY genre, release_year;
+
+-- SALES BY RATINGS
+
+-- How do game ratings correlate with sales figures
+SELECT
+	title,
+	critic_score,
+	SUM(total_sales) AS	 total_rating_sales
+FROM vg_sales
+WHERE total_sales IS NOT NULL
+	AND critic_score IS NOT NULL
+GROUP BY title, critic_score
+ORDER BY total_rating_sales DESC;
+
+
 
 
 
