@@ -237,7 +237,7 @@ ORDER BY genre, release_year;
 SELECT
 	title,
 	critic_score,
-	SUM(total_sales) AS	 total_rating_sales
+	SUM(total_sales) AS total_rating_sales
 FROM vg_sales
 WHERE total_sales IS NOT NULL
 	AND critic_score IS NOT NULL
