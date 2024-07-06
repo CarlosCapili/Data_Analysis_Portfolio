@@ -1,21 +1,21 @@
 -- What consoles/devices are used?
 SELECT
 	console
-FROM vg_sales
+FROM vg_sales_cleaned
 GROUP BY console
 ORDER BY console;
 
 -- Who are the various publishers?
 SELECT 
 	publisher
-FROM vg_sales
+FROM vg_sales_cleaned
 GROUP BY publisher
 ORDER BY publisher;
 
 -- Who are the various developers?
 SELECT 
 	developer
-FROM vg_sales
+FROM vg_sales_cleaned
 GROUP BY developer
 ORDER BY developer;
 
@@ -23,7 +23,7 @@ ORDER BY developer;
 SELECT 
 	title,
 	COUNT(console) AS console_availability 
-FROM vg_sales
+FROM vg_sales_cleaned
 GROUP BY title
 ORDER BY console_availability DESC;
 
@@ -31,7 +31,7 @@ ORDER BY console_availability DESC;
 SELECT
 	title,
 	console
-FROM vg_sales
+FROM vg_sales_cleaned
 GROUP BY title, console
 ORDER BY title;
 
@@ -41,29 +41,27 @@ ORDER BY title;
 SELECT
 	EXTRACT(YEAR FROM release_date) AS year,
 	SUM(total_sales) AS yearly_total_sales
-FROM vg_sales
+FROM vg_sales_cleaned
 WHERE release_date IS NOT NULL
-	AND total_sales IS NOT NULL
 GROUP BY EXTRACT(YEAR FROM release_date)
 ORDER BY year;
 
--- What is the highest sold title for each release year? (Does not add up sales between consoles ie. PS3/X360/PS4/XOne)
+-- What is the best selling title for each release year? (Does not add up sales between consoles ie. PS3/X360/PS4/XOne)
 WITH best_selling_title AS (
 	SELECT
 		title,
 		total_sales,
-		release_date,
+		EXTRACT(YEAR FROM release_date) AS release_year,
 		publisher,
 		developer,
 		console,
-		ROW_NUMBER() OVER(PARTITION BY DATE_TRUNC('year', release_date) ORDER BY total_sales DESC) AS rn
-	FROM vg_sales
-	WHERE total_sales IS NOT NULL
-		AND release_date IS NOT NULL
+		ROW_NUMBER() OVER(PARTITION BY EXTRACT(YEAR FROM release_date) ORDER BY total_sales DESC) AS rn
+	FROM vg_sales_cleaned
+	WHERE release_date IS NOT NULL
 )
 
 SELECT 
-	EXTRACT(YEAR FROM release_date) AS release_year,
+	release_year,
 	title,
 	publisher,
 	developer,
@@ -72,16 +70,37 @@ SELECT
 FROM best_selling_title
 WHERE rn = 1
 
+-- What is the best selling title for each release year? (Adding up sales on all consoles ie. PS3/X360/PS4/XOne)
+WITH bestseller_per_year AS (
+	SELECT
+		EXTRACT(YEAR FROM release_date) AS release_year,
+		title,
+		publisher,
+		developer,
+		SUM(total_sales) AS all_time_sales,
+		ROW_NUMBER() OVER(PARTITION BY EXTRACT(YEAR FROM release_date) ORDER BY SUM(total_sales) DESC) AS rn
+	FROM vg_sales_cleaned
+	WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
+	GROUP BY EXTRACT(YEAR FROM release_date), title, publisher, developer
+)
+
+SELECT
+	release_year,
+	title,
+	publisher,
+	developer,
+	all_time_sales
+FROM bestseller_per_year
+WHERE rn =1;
+
 -- What are the top 10 best-selling titles sold worldwide? (Total sales of games between consoles) Has the industry grown over time?
 SELECT
 	title,
 	MIN(EXTRACT(YEAR FROM release_date)) AS release_year,
 	publisher,
-	developer,
 	SUM(total_sales) AS sales_ww
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-GROUP BY title, publisher, developer
+FROM vg_sales_cleaned
+GROUP BY title, publisher
 ORDER BY sales_ww DESC
 LIMIT 10;
 
@@ -91,8 +110,7 @@ LIMIT 10;
 SELECT
 	publisher,
 	SUM(total_sales) AS ptotal_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
+FROM vg_sales_cleaned
 GROUP BY publisher
 ORDER BY ptotal_sales DESC;
 
@@ -103,8 +121,7 @@ WITH top_selling_game AS (
 		title,
 		SUM(total_sales) AS total_game_sales,
 		ROW_NUMBER() OVER(PARTITION BY publisher ORDER BY SUM(total_sales) DESC) AS rn
-	FROM vg_sales
-	WHERE total_sales IS NOT NULL
+	FROM vg_sales_cleaned
 	GROUP BY publisher, title
 )
 
@@ -123,10 +140,50 @@ SELECT
 	release_date,
 	console,
 	total_sales
-FROM vg_sales
+FROM vg_sales_cleaned
 WHERE title LIKE 'Call of Duty%' 
-	AND total_sales IS NOT NULL
 ORDER BY release_date, title, total_sales DESC;
+
+-- What is the best selling franchise? -- Work in Progress
+SELECT 
+	title,
+	SUM(total_sales) AS total_franchise_sales
+FROM vg_sales_cleaned
+WHERE title LIKE 'Call Of Duty%'
+	AND title LIKE 'Grand Theft Auto%'
+	AND title LIKE 'Minecraft%'
+	AND title LIKE 'FIFA%'
+	AND title LIKE 'Assassin''s Creed%'
+	AND title LIKE 'Battlefield%'
+	AND title LIKE 'LEGO%'
+	AND title LIKE 'The Sims%'
+	AND title LIKE 'NBA 2%'
+	AND title LIKE 'The Elder Scrolls%'
+	AND title LIKE 'Red Dead Redemption%'
+	AND title LIKE 'Guitar Hero%'
+	AND title LIKE 'Fallout%'
+	AND title LIKE 'Destiny%'
+	AND title LIKE 'Star Wars%'
+	AND title LIKE 'Need for Speed'
+	AND title LIKE 'Batman: Arkham%'
+	AND title LIKE 'Halo%'
+	AND title LIKE 'Watch Dogs%'
+	AND title LIKE 'Medal of Honor%'
+	AND title LIKE 'Resident Evil%'
+	AND title LIKE 'NFL%'
+	AND title LIKE 'Spider-Man%'
+	AND title LIKE 'Tomb Raider%'
+	AND title LIKE 'Tom Clancy%'
+	AND title LIKE 'Final Fantasy%'
+	AND title LIKE 'WWE%'
+	AND title LIKE 'Street Fighter%'
+	AND title LIKE 'Mario%'
+	AND title LIKE 'Borderlands%'
+	AND title LIKE 'Uncharted%'
+	AND title LIKE 'The Lord of the Rings%'
+	AND title LIKE 'Crash Bandicoot%'
+GROUP BY 1
+ORDER BY total_franchise_sales DESC;
 
 -- SALES BY REGION
 
@@ -139,12 +196,7 @@ SELECT
 	ROUND(jp_sales/total_sales, 2) AS jp_sales_ratio,
 	ROUND(pal_sales/total_sales, 2) AS euro_afr_sales_ratio,
 	ROUND(other_sales/total_sales, 2) AS restofworld_sales_ratio
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-	AND na_sales IS NOT NULL
-	AND jp_sales IS NOT NULL
-	AND pal_sales IS NOT NULL
-	AND other_sales IS NOT NULL
+FROM vg_sales_cleaned
 ORDER BY publisher, title;
 
 -- For each game display the region with the highest sales
@@ -156,12 +208,7 @@ WITH sales_per_region AS (
 		SUM(jp_sales) AS total_jp_sales,
 		SUM(pal_sales) AS total_pal_sales,
 		SUM(other_sales) AS total_other_sales
-	FROM vg_sales
-	WHERE total_sales IS NOT NULL
-		AND na_sales IS NOT NULL
-		AND jp_sales IS NOT NULL
-		AND pal_sales IS NOT NULL
-		AND other_sales IS NOT NULL
+	FROM vg_sales_cleaned
 	GROUP BY title, publisher
 )
 
@@ -183,30 +230,36 @@ FROM sales_per_region
 SELECT
 	console,
 	SUM(total_sales) AS total_platform_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
+FROM vg_sales_cleaned
 GROUP BY console
 ORDER BY total_platform_sales DESC;
 
 -- What is the best selling game per platform?
-SELECT
+WITH bestseller_platform AS (
+	SELECT
+		console,
+		title,
+		publisher,
+		total_sales,
+		ROW_NUMBER() OVER(PARTITION BY console ORDER BY total_sales DESC) AS rn
+	FROM vg_sales_cleaned
+)
+
+SELECT 
 	console,
 	title,
 	publisher,
-	SUM(total_sales) AS ts_across_consoles
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-GROUP BY console, title, publisher
-ORDER BY console, ts_across_consoles DESC;
+	total_sales
+FROM bestseller_platform
+WHERE rn = 1;
 
 -- How have sales on each platform changed over time?
 SELECT
 	EXTRACT(YEAR FROM release_date) AS release_year,
 	console,
-	SUM(total_sales)
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-	AND EXTRACT(YEAR FROM release_date) IS NOT NULL
+	SUM(total_sales) AS total_platform_sales
+FROM vg_sales_cleaned
+WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
 GROUP BY EXTRACT(YEAR FROM release_date), console
 ORDER BY console, release_year;
 
@@ -216,8 +269,7 @@ ORDER BY console, release_year;
 SELECT
 	genre,
 	SUM(total_sales) AS total_genre_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
+FROM vg_sales_cleaned
 GROUP BY genre;
 
 -- How have sales for each genre changed over time?
@@ -225,9 +277,8 @@ SELECT
 	EXTRACT(YEAR FROM release_date) AS release_year,
 	genre,
 	SUM(total_sales) AS total_genre_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-	AND EXTRACT(YEAR FROM release_date) IS NOT NULL
+FROM vg_sales_cleaned
+WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
 GROUP BY EXTRACT(YEAR FROM release_date), genre
 ORDER BY genre, release_year;
 
@@ -238,9 +289,8 @@ SELECT
 	title,
 	critic_score,
 	SUM(total_sales) AS total_rating_sales
-FROM vg_sales
-WHERE total_sales IS NOT NULL
-	AND critic_score IS NOT NULL
+FROM vg_sales_cleaned
+WHERE critic_score IS NOT NULL
 GROUP BY title, critic_score
 ORDER BY total_rating_sales DESC;
 
