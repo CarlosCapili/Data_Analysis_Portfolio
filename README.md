@@ -1,5 +1,5 @@
 # SQL-Portfolio
-This repository contains analysis on various datasets using SQL in Postgre. You can find the SQL queries in the respective folders and the findings below.
+This repository contains analysis on various datasets using SQL in Postgres. You can find the SQL queries in the respective folders and the findings below.
 
 
 ## NBA Stats
