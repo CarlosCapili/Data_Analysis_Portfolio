@@ -144,47 +144,6 @@ FROM vg_sales_cleaned
 WHERE title LIKE 'Call of Duty%' 
 ORDER BY release_date, title, total_sales DESC;
 
--- What is the best selling franchise? -- Work in Progress
-SELECT 
-	title,
-	SUM(total_sales) AS total_franchise_sales
-FROM vg_sales_cleaned
-WHERE title LIKE 'Call Of Duty%'
-	AND title LIKE 'Grand Theft Auto%'
-	AND title LIKE 'Minecraft%'
-	AND title LIKE 'FIFA%'
-	AND title LIKE 'Assassin''s Creed%'
-	AND title LIKE 'Battlefield%'
-	AND title LIKE 'LEGO%'
-	AND title LIKE 'The Sims%'
-	AND title LIKE 'NBA 2%'
-	AND title LIKE 'The Elder Scrolls%'
-	AND title LIKE 'Red Dead Redemption%'
-	AND title LIKE 'Guitar Hero%'
-	AND title LIKE 'Fallout%'
-	AND title LIKE 'Destiny%'
-	AND title LIKE 'Star Wars%'
-	AND title LIKE 'Need for Speed'
-	AND title LIKE 'Batman: Arkham%'
-	AND title LIKE 'Halo%'
-	AND title LIKE 'Watch Dogs%'
-	AND title LIKE 'Medal of Honor%'
-	AND title LIKE 'Resident Evil%'
-	AND title LIKE 'NFL%'
-	AND title LIKE 'Spider-Man%'
-	AND title LIKE 'Tomb Raider%'
-	AND title LIKE 'Tom Clancy%'
-	AND title LIKE 'Final Fantasy%'
-	AND title LIKE 'WWE%'
-	AND title LIKE 'Street Fighter%'
-	AND title LIKE 'Mario%'
-	AND title LIKE 'Borderlands%'
-	AND title LIKE 'Uncharted%'
-	AND title LIKE 'The Lord of the Rings%'
-	AND title LIKE 'Crash Bandicoot%'
-GROUP BY 1
-ORDER BY total_franchise_sales DESC;
-
 -- SALES BY REGION
 
 -- How are the sales distributed across different regions?
@@ -262,6 +221,15 @@ FROM vg_sales_cleaned
 WHERE EXTRACT(YEAR FROM release_date) IS NOT NULL
 GROUP BY EXTRACT(YEAR FROM release_date), console
 ORDER BY console, release_year;
+
+-- Show the platforms as a percentage of the total sales
+SELECT
+	console,
+	ROUND(SUM(total_sales) / (SELECT SUM(total_sales) FROM vg_sales_copy) * 100, 1) AS platform_sales_pct 
+FROM vg_sales_copy
+GROUP BY console
+HAVING ROUND(SUM(total_sales) / (SELECT SUM(total_sales) FROM vg_sales_copy) * 100, 1) IS NOT NULL
+ORDER BY platform_sales_pct DESC;
 
 -- SALES BY GENRE
 
