@@ -8,8 +8,7 @@ WITH ordered_age AS (
 		season,
 		ROW_NUMBER() OVER(PARTITION BY season ORDER BY player_age, player_name) AS rn_asc,
 		ROW_NUMBER() OVER(PARTITION BY season ORDER BY player_age DESC, player_name) AS rn_desc
-	FROM nba_data
-	WHERE season LIKE '2___-__'
+	FROM nba_data_cleaned
 )
 
 SELECT 
@@ -26,35 +25,33 @@ WITH season_gp AS (
 	SELECT 
 		season,
 		ROUND(AVG(gp), 1) AS avg_gp,
-		LAG(ROUND(AVG(gp), 1)) OVER(ORDER BY season) AS previous_avg_gp,
-		ROUND(AVG(gp), 1) - (LAG(ROUND(AVG(gp), 1)) OVER(ORDER BY season)) AS inc_dec
-	FROM nba_data
-	WHERE season LIKE '2___-__'
+		LAG(ROUND(AVG(gp), 1)) OVER(ORDER BY season) AS prev_avg_gp
+	FROM nba_data_cleaned
 	GROUP BY season
 )
 	
 SELECT
 	season,
 	avg_gp,
-	inc_dec,
-	CASE
-		-- Formula: (current_gp - prev_gp) / prev_gp * 100 = % increase/decrease
-		WHEN inc_dec < 0 
-			THEN CONCAT(ROUND(ABS(inc_dec) / previous_avg_gp * 100.0, 2), '% decrease')
-		WHEN inc_dec > 0 
-			THEN CONCAT(ROUND(ABS(inc_dec) / previous_avg_gp * 100.0, 2), '% increase')
-	END AS pct_inc_dec
+	ROUND(ABS(avg_gp - prev_avg_gp) / prev_avg_gp * 100.0, 2) AS pct_inc_dec
 FROM season_gp;
-
 
 -- What is the average height of an NBA player per season?
 SELECT 
 	season,
-	ROUND(AVG(player_height)::numeric, 2) AS avg_player_height
-FROM nba_data
-WHERE season LIKE '2___-__'
+	ROUND(AVG(player_height), 2) AS avg_player_height
+FROM nba_data_cleaned
 GROUP BY season
 ORDER BY season;
+
+Show how many countries are represented in the NBA per season
+SELECT
+	season,
+	country,
+	COUNT(*) AS num_players
+FROM nba_data_cleaned
+GROUP BY season, country
+ORDER BY season, country
 
 -- PERFORMANCE METRICS
 
@@ -62,17 +59,18 @@ ORDER BY season;
 WITH ordered_ppg AS (
 	SELECT
 		player_name,
+		team_abbrev,
 		country,
 		pts,
 		season,
 		ROW_NUMBER() OVER(PARTITION BY season ORDER BY pts DESC) AS rn
-	FROM nba_data
-	WHERE season LIKE '2___-__'
+	FROM nba_data_cleaned
 )
 
 SELECT
 	season,
 	player_name,
+	team_abbrev,
 	country,
 	pts
 FROM ordered_ppg
@@ -82,17 +80,18 @@ WHERE rn = 1;
 WITH ordered_rpg AS (
 	SELECT
 		player_name,
+		team_abbrev,
 		country,
 		reb,
 		season,
 		ROW_NUMBER() OVER(PARTITION BY season ORDER BY reb DESC) AS rn
-	FROM nba_data
-	WHERE season LIKE '2___-__'
+	FROM nba_data_cleaned
 )
 
 SELECT
 	season,
 	player_name,
+	team_abbrev,
 	country,
 	reb
 FROM ordered_rpg
@@ -102,17 +101,18 @@ WHERE rn = 1;
 WITH ordered_apg AS (
 	SELECT
 		player_name,
+		team_abbrev,
 		country,
 		ast,
 		season,
 		ROW_NUMBER() OVER(PARTITION BY season ORDER BY ast DESC) AS rn
-	FROM nba_data
-	WHERE season LIKE '2___-__'
+	FROM nba_data_cleaned
 )
 
 SELECT
 	season,
 	player_name,
+	team_abbrev,
 	country,
 	ast
 FROM ordered_apg
@@ -123,7 +123,7 @@ SELECT
 	player_name,
 	team_abbrev,
 	pts
-FROM nba_data
+FROM nba_data_cleaned
 WHERE season = '2022-23'
 ORDER BY pts DESC
 LIMIT 10;
@@ -133,7 +133,7 @@ SELECT
 	player_name,
 	team_abbrev,
 	reb
-FROM nba_data
+FROM nba_data_cleaned
 WHERE season = '2022-23'
 ORDER BY reb DESC
 LIMIT 10;
@@ -143,7 +143,7 @@ SELECT
 	player_name,
 	team_abbrev,
 	ast
-FROM nba_data
+FROM nba_data_cleaned
 WHERE season = '2022-23'
 ORDER BY ast DESC
 LIMIT 10;
@@ -153,8 +153,8 @@ SELECT
 	player_name,
 	team_abbrev,
 	country,
-	(ts_pct * 100.0) AS true_shooting_pct
-FROM nba_data
+	ROUND(ts_pct * 100, 1) AS ts_pct
+FROM nba_data_cleaned
 WHERE season = '2022-23'
 ORDER BY ts_pct DESC
 LIMIT 10;
@@ -166,9 +166,8 @@ SELECT
 	pts,
 	reb,
 	ast
-FROM nba_data
-WHERE 
-	season = '2022-23'
+FROM nba_data_cleaned
+WHERE season = '2022-23'
 	AND ((pts >= 10 AND reb >= 10) OR (pts >= 10 AND ast >= 10) OR (reb >= 10 AND ast >= 10))
 ORDER BY pts, reb, ast
 LIMIT 10;
@@ -180,70 +179,40 @@ SELECT
 	player_name,
 	player_age,
 	gp,
-	ROUND((pts*gp)::numeric, 0) AS points,
-	ROUND((reb*gp)::numeric, 0) AS rebounds,
-	ROUND((ast*gp)::numeric, 0) AS assists
-FROM nba_data
-WHERE season LIKE '2___-__'
+	ROUND(pts*gp) AS points,
+	ROUND(reb*gp) AS rebounds,
+	ROUND(ast*gp) AS assists
+FROM nba_data_cleaned
 ORDER BY season, team_abbrev, player_name
 
-
 -- How many points, rebounds, assists has each team scored per season?
-WITH nba_trad_stats AS (
-	SELECT
-		season,
-		team_abbrev,
-		player_name,
-		player_age,
-		gp,
-		ROUND((pts*gp)::numeric, 0) AS points,
-		ROUND((reb*gp)::numeric, 0) AS rebounds,
-		ROUND((ast*gp)::numeric, 0) AS assists
-	FROM nba_data
-	WHERE season LIKE '2___-__'
-	ORDER BY season, team_abbrev, player_name
-)
-
-SELECT DISTINCT
+SELECT
 	season,
 	team_abbrev,
-	SUM(points) OVER(PARTITION BY season, team_abbrev) AS total_pts,
-	SUM(rebounds) OVER(PARTITION BY season, team_abbrev) AS total_reb,
-	SUM(assists) OVER(PARTITION BY season, team_abbrev) AS total_ast
-FROM nba_trad_stats
-ORDER BY season;
+	SUM(ROUND(pts*gp)) AS points,
+	SUM(ROUND(reb*gp)) AS rebounds,
+	SUM(ROUND(ast*gp)) AS assists
+FROM nba_data_cleaned
+GROUP BY season, team_abbrev
+ORDER BY season, team_abbrev
 
 -- Which player scored the most points on each team per season?
-WITH nba_trad_stats AS (
+WITH player_total_points AS ( 
 	SELECT
 		season,
 		team_abbrev,
 		player_name,
-		player_age,
-		gp,
-		ROUND((pts*gp)::numeric, 0) AS points,
-		ROUND((reb*gp)::numeric, 0) AS rebounds,
-		ROUND((ast*gp)::numeric, 0) AS assists
-	FROM nba_data
-	WHERE season LIKE '2___-__'
-	ORDER BY season, team_abbrev, player_name
+		ROUND(pts*gp) AS points,
+		ROW_NUMBER() OVER(PARTITION BY season, team_abbrev ORDER BY ROUND(pts*gp) DESC) AS rn
+ 	FROM nba_data_cleaned
+	ORDER BY season, team_abbrev
 )
 
 SELECT 
 	season,
 	team_abbrev,
 	player_name,
-	player_age,
 	points
-FROM (
-	SELECT
-		season,
-		team_abbrev,
-		player_name,
-		player_age,
-		points,
-		ROW_NUMBER() OVER(PARTITION BY season, team_abbrev ORDER BY points DESC, player_name) AS rn
-	FROM nba_trad_stats
-) numbered_points
-WHERE rn = 1
-ORDER BY team_abbrev, season;
+FROM player_total_points
+WHERE rn = 1;
+
