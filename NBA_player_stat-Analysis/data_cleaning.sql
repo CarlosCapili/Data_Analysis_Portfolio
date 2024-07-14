@@ -30,7 +30,7 @@ SELECT
 	COUNT(*) FILTER(WHERE season IS NULL) AS null_season
 FROM nba_data_cleaned;
 
--- Update columns to be rounded to a certain amount of decimal place and change datatype to numeric
+-- Update columns to be rounded to a certain amount of decimal place
 UPDATE nba_data_cleaned
 SET player_height = ROUND(player_height::numeric, 1),
 	player_weight = ROUND(player_weight::numeric, 1),
@@ -44,6 +44,3 @@ SET player_height = ROUND(player_height::numeric, 1),
 DELETE FROM nba_data_cleaned
 WHERE season NOT LIKE '20__-__';
 
--- SELECT * 
--- FROM nba_data_cleaned 
--- ORDER BY player_id;
