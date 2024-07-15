@@ -44,7 +44,7 @@ FROM nba_data_cleaned
 GROUP BY season
 ORDER BY season;
 
-Show how many countries are represented in the NBA per season
+-- Show how many countries are represented in the NBA per season
 SELECT
 	season,
 	country,
@@ -52,6 +52,11 @@ SELECT
 FROM nba_data_cleaned
 GROUP BY season, country
 ORDER BY season, country
+
+-- How many distinct countries do the players come from?
+SELECT
+	COUNT(DISTINCT country) AS player_countries
+FROM nba_data_cleaned
 
 -- PERFORMANCE METRICS
 
