@@ -1,5 +1,5 @@
 # SQL-Portfolio
-**I have a genuine interest in analyzing data. I know I am not an expert but since I have an interest in data analysis, I am ready to learn as much as I can**. With that being said, this repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
+This repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
 
 When performing an analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
 
