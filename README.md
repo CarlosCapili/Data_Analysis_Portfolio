@@ -25,7 +25,7 @@ When performing an analysis for a given dataset I follow the **OSEMN** methodolo
 You can find the SQL queries in the respective project folders and some of my project findings below.
 
 # Projects
-1. [NBA Stats 2012-2023](## 1. NBA Stats 2012-2023)
+1. [NBA Stats 2012-2023](##-1.-NBA-Stats-2012-2023)
 2. [Toronto Auto Theft 2014-2023](## 2. Toronto Auto Theft 2014-2023)
 3. [Video Game Sales 1977-2020](## 3. Video Game Sales 1977-2020)
 
