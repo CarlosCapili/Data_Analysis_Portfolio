@@ -1,5 +1,5 @@
 # SQL-Portfolio
-**I have a genuine interest in analyzing data and I am always wanting to learn more**. With that being said, this repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
+**I have a genuine interest in analyzing data. I know I am not an expert but since I have an interest in data analysis, I am ready to learn as much as I can**. With that being said, this repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
 
 When performing an analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
 
@@ -22,7 +22,7 @@ When performing an analysis for a given dataset I follow the **OSEMN** methodolo
 - I record all my findings and summarize them.
 - I use **Power BI** to visualize my findings for better understanding and for easy reporting to others.
 
-You can find the SQL queries in the respective folders and some of my findings below.
+You can find the SQL queries in the respective project folders and some of my project findings below.
 
 ## NBA Stats 2012-2023
 ### Source Data
