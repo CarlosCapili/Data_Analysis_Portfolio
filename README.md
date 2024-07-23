@@ -19,7 +19,7 @@ When performing an analysis for a given dataset I follow the **OSEMN** methodolo
 ### 4. **M**odel
 - This portion I usually skip because I don't really have any models I run my data through. If I do, the model wasn't made by me...
 ### 5. i**N**terpret
-- I record all my findings and summarize them.
+- I record all my findings, summarize them, and make future recommendations.
 - I use **Power BI** to visualize my findings for better understanding and for easy reporting to others.
 
 You can find the SQL queries in the respective project folders and some of my project findings below.
