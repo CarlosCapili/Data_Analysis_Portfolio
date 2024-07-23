@@ -25,11 +25,11 @@ When performing an analysis for a given dataset I follow the **OSEMN** methodolo
 You can find the SQL queries in the respective project folders and some of my project findings below.
 
 # Projects
-1. [NBA Stats 2012-2023](## 1. NBA-Stats 2012-2023)
-2. [Toronto Auto Theft 2014-2023](## 2. Toronto Auto Theft 2014-2023)
-3. [Video Game Sales 1977-2020](## 3. Video Game Sales 1977-2020)
+1. [NBA Stats 2012-2023](#NBA_stats)
+2. [Toronto Auto Theft 2014-2023](#toronto_thefts)
+3. [Video Game Sales 1977-2020](#videogame_sales)
 
-## 1. NBA Stats 2012-2023
+## 1. NBA Stats 2012-2023<a id='NBA_stats'></a>
 ### Source Data
 https://www.kaggle.com/datasets/justinas/nba-players-data
 
@@ -42,7 +42,7 @@ To determine top performers in categories like scoring, assists, rebounds, and o
 3. In the 2022-23 season, the top 3 players with the highest rpg are Anthony Davis(LAL) 12.5 rpg, Domantas Sabonis (SAC) 12.3 rpg, and Giannis Antetokounmpo (MIL) 11.8 rpg.
 4. In the 2022-23 season, the top 3 players with the highest apg are James Harden (PHI) 10.7 apg, Tyrese Haliburton (IND) 10.4 apg, and Trae Young (ATL) 10.2 apg
 
-## 2. Toronto Auto Theft 2014-2023
+## 2. Toronto Auto Theft 2014-2023<a id='toronto_thefts'></a>
 ### Source Data
 https://data.torontopolice.on.ca/datasets/TorontoPS::auto-theft-open-data/about
 
@@ -63,8 +63,7 @@ With the continuous rise of auto theft crimes in Toronto and within the GTA, it 
 5. In 2014, a total of 3536 auto thefts occurred with 27.7% in residential areas while 8.0% in commercial areas. In 2023 a total of 11517 thefts occurred with 38.8% in residential areas while 7.7% in commercial areas. 
 6. 1 West Humber-Clairville ranks as the number 1 neighbourhood with the most auto thefts from 2014-2023 with 130 Milliken and 159 Etobicoke City Centre ranking 2 and 3 respectively in 2023.
 
-
-## 3. Video Game Sales 1977-2020
+## 3. Video Game Sales 1977-2020<a id='videogame_sales'></a>
 ### Source Data
 https://www.kaggle.com/datasets/asaniczka/video-game-sales-2024/data
 
