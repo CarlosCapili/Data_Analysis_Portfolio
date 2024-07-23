@@ -3,13 +3,13 @@ This repository contains SQL queries on various datasets in a Postgres database.
 
 When performing my analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
 
-###1. **O**btain
+### 1. **O**btain
 - I find datasets on Kaggle, government websites or anywhere I can and download them as **csv** files. When selecting datasets I try to select the ones that are official and have been published for public use.
 - To load the dataset into pgAdmin4, I create a new database and a table matching the columns and datatypes of the dataset and finally I import.
-###2. **S**crub
-###3. **E**xplore
-###4. **M**odel
-###5. i**N**terpret
+### 2. **S**crub
+### 3. **E**xplore
+### 4. **M**odel
+### 5. i**N**terpret
 
 You can find the SQL queries in the respective folders and some of the findings below.
 
