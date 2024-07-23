@@ -1,17 +1,28 @@
 # SQL-Portfolio
-This repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
+**I have a genuine interest in analyzing data and I am always wanting to learn more**. With that being said, this repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
 
-When performing my analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
+When performing an analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
 
 ### 1. **O**btain
-- I find datasets on Kaggle, government websites or anywhere I can and download them as **csv** files. When selecting datasets I try to select the ones that are official and have been published for public use.
+- I find datasets on Kaggle, government websites or anywhere I can and download them as **.csv** files. When selecting datasets I try to select the ones that are official and have been published for public use.
 - To load the dataset into pgAdmin4, I create a new database and a table matching the columns and datatypes of the dataset and finally I import.
 ### 2. **S**crub
+- I create a copy of the original dataset and perform my cleaning on the copy.
+- Drop columns I don't need.
+- Remove duplicates or irrelevant rows.
+- Fix structural errors like typos, naming conventions, inconsistent strings, etc.
+- Handle and/or replace missing values.
+- Document all the steps I have taken to achieve this clean state.
 ### 3. **E**xplore
+- This is where I begin writing queries to find the answers to some of the questions I brainstormed and get a better understanding of the data.
+- I aggregate the data to find percentages, sums, max and min values, and more
 ### 4. **M**odel
+- This portion I usually skip because I don't really have any models I run my data through. If I do, the model wasn't made by me...
 ### 5. i**N**terpret
+- I record all my findings and summarize them.
+- I use **Power BI** to visualize my findings for better understanding and for easy reporting to others.
 
-You can find the SQL queries in the respective folders and some of the findings below.
+You can find the SQL queries in the respective folders and some of my findings below.
 
 ## NBA Stats 2012-2023
 ### Source Data
