@@ -1,11 +1,10 @@
 # Data Analysis Portfolio
-This repository contains SQL queries on various datasets in a Postgres database. I use pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub.
+This repository contains a collection of data analysis projects using SQL or Python. I found these datasets interesting enough to analyze. I write SQL queries on the datasets in a Postgres database, using pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub. When I perform data analysis in Python, I am using Jupyter Notebook.
 
 When performing an analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
 
 ### 1. **O**btain
 - I find datasets on Kaggle, government websites or anywhere I can and download them as **.csv** files. When selecting datasets I try to select the ones that are official and have been published for public use.
-- To load the dataset into pgAdmin4, I create a new database and a table matching the columns and datatypes of the dataset and finally I import.
 ### 2. **S**crub
 - I create a copy of the original dataset and perform my cleaning on the copy.
 - Drop columns I don't need.
@@ -20,14 +19,13 @@ When performing an analysis for a given dataset I follow the **OSEMN** methodolo
 - This portion I usually skip because I don't really have any models I run my data through. If I do, the model wasn't made by me...
 ### 5. i**N**terpret
 - I record all my findings, summarize them, and make future recommendations.
-- I use **Power BI** to visualize my findings for better understanding and for easy reporting to others.
-
-You can find the SQL queries in the respective project folders and some of my project findings below.
+- I use **Power BI** or **seaborn/matplotlib.pyplot library** to visualize my findings for better understanding and for easy reporting to others.
 
 # Projects
-1. [NBA Stats 2012-2023](#NBA_stats)
-2. [Toronto Auto Theft 2014-2023](#toronto_thefts)
-3. [Video Game Sales 1977-2020](#videogame_sales)
+1. [NBA Stats 2012-2023](#NBA_stats) - SQL
+2. [Toronto Auto Theft 2014-2023](#toronto_thefts) - SQL
+3. [Video Game Sales 1977-2020](#videogame_sales) - SQL
+4. [Melbourne Housing Snapshot](#melbourne_housing) - Python
 
 ## 1. NBA Stats 2012-2023<a id='NBA_stats'></a>
 ### Source Data
@@ -76,3 +74,25 @@ Almost every person in the newer generations love to play video games. This data
 3. PS2 ranks as the number 1 platform for games to be purchased with 1.028 billion titles sold accounting for 15.6% of all sales, followed by number 2 Xbox 360 at 13.0%, number 3 PS3 at 12.7%, number 4 PS1 at 8.3%, and number 5 PS4 at 8.2%. Sony's Playstation is the more popular platform beating out Microsoft's Xbox.
 4. The best selling platforms for each region are: Xbox 360 - NA region, PS3 - PAL region, PS1 - Japan, PS2 - Rest of World
 5. Sports games are the number 1 selling game genre with 1187.51 million titles sold, followed by Action games, then Shooters
+
+## 4. Melbourne Housing Snapshot<a id='melbourne_housing'></a>
+### Source Data
+https://www.kaggle.com/datasets/dansbecker/melbourne-housing-snapshot
+
+### Purpose
+To perform exploratory data analysis on the Melbourne Housing dataset to identify trends and patterns regarding housing price in relation to number of rooms (Bed and Bath), car parking, distance to CBD (Central Business District), etc.
+
+### Findings:
+- The average housing price in Melbourne is \\$1.13 million
+- 75\% of housing costs above \\$750,000
+- Housing 20km and less from the Central Business District (CBD) costs can range between \\$500,000 to 2.5 million
+- The most expensive region of Melbourne is Southern Metropolitan with an average price of \\$1.43 million
+- The least expensive region is Eastern Victoria with an average price of \\$430,000
+- Region Housing Price rankings:
+    1. Southern Metropolitan - \\$1.43 million
+    2. Northern Victoria - \\$1.36 million
+    3. Northern Metropolitan - \\$1.08 million
+    4. Eastern Metropolitan - \\$940,000
+    5. South-Eastern Metropolitan - \\$746,000
+    6. Western Metropolitan  - \\$738,000
+    7. Eastern Victoria -\\$430,000
