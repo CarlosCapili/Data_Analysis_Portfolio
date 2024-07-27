@@ -3,7 +3,7 @@
 https://population.un.org/wpp/Download/Standard/MostUsed/
 
 ## Purpose
-To create a dashboard describing a country's population over the years.
+To use United Nations country dataset and create a dashboard describing a country's population over the years.
 
 ## Tools
 - Power BI
