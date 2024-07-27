@@ -1,4 +1,4 @@
-# 4. Melbourne Housing Snapshot<a id='melbourne_housing'></a>
+# Melbourne Housing Snapshot<a id='melbourne_housing'></a>
 ## Source Data
 https://www.kaggle.com/datasets/dansbecker/melbourne-housing-snapshot
 
