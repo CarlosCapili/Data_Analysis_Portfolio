@@ -24,4 +24,5 @@ With the continuous rise of auto theft crimes in Toronto and within the GTA, it 
 6. 1 West Humber-Clairville ranks as the number 1 neighbourhood with the most auto thefts from 2014-2023 with 130 Milliken and 159 Etobicoke City Centre ranking 2 and 3 respectively in 2023.
 
 ## Dashboard
+I took a **heavy** inspiration from the Toronto Police Dashboard when making this one.
 ![image](https://github.com/CarlosCapili/Power-BI-Dashboards/assets/59804756/59b834a3-f023-4096-a5da-c05742368345)
