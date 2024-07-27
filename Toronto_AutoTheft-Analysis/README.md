@@ -1,4 +1,4 @@
-# 2. Toronto Auto Theft 2014-2023
+# Toronto Auto Theft 2014-2023
 ## Source Data
 https://data.torontopolice.on.ca/datasets/TorontoPS::auto-theft-open-data/about
 
