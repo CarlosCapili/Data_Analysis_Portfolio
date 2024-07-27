@@ -13,4 +13,5 @@ You can find the projects in their respective folders.
 2. Toronto Auto Theft 2014-2023 - SQL, Power BI
 3. Video Game Sales 1977-2020 - SQL, Power BI
 4. Melbourne Housing Snapshot - Python
+5. United Nations Population 1950-2021 - Power BI
 
