@@ -16,3 +16,5 @@ Almost every person in the newer generations love to play video games. This data
 4. The best selling platforms for each region are: Xbox 360 - NA region, PS3 - PAL region, PS1 - Japan, PS2 - Rest of World
 5. Sports games are the number 1 selling game genre with 1187.51 million titles sold, followed by Action games, then Shooters
 
+## Dashboard
+![image](https://github.com/CarlosCapili/Power-BI-Dashboards/assets/59804756/1a41a648-176b-4a3c-a485-e5214346906b)
