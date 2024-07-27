@@ -9,9 +9,9 @@ You can find the projects in their respective folders.
 - Power BI
 
 ## Projects
-1. NBA Stats 2012-2023 
-2. Toronto Auto Theft 2014-2023 
-3. Video Game Sales 1977-2020
-4. Melbourne Housing Snapshot 
+1. Video Game Sales 1977-2020
+2. Toronto Auto Theft 2014-2023
+3. NBA Stats 2012-2023
+4. Melbourne Housing Snapshot
 5. United Nations Population 1950-2021
 
