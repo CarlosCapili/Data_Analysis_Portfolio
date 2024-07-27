@@ -1,5 +1,10 @@
 # Data Analysis Portfolio
-This repository contains data analysis projects using the **OSEMN** approach. Using this approach I find myself continuing to refine my skills in properly cleaning and organizing data, uncovering patterns, generating meaningful insights, and clearly communicating my findings. Building this portfolio is helping me develop a proficiency in SQL, Python and it's data analysis libraries (pandas, numpy, seaborn, Matplotlib), and Power BI. 
+This repository contains data analysis projects using the **OSEMN** approach. Using this approach I find myself continuing to refine my skills in properly cleaning and organizing data, uncovering patterns, generating meaningful insights, and clearly communicating my findings. 
+
+## Tools
+- Python (pandas, seaborn, numpy, Matplotlib)
+- SQL (Postgres)
+- Power BI
 
 # Projects
 1. [NBA Stats 2012-2023](#NBA_stats) - SQL, Power BI
