@@ -1,30 +1,10 @@
 # Data Analysis Portfolio
-This repository contains a collection of data analysis projects using SQL or Python. I found these datasets interesting enough to analyze. I write SQL queries on the datasets in a Postgres database, using pgAdmin4 as my Postgres GUI and Git by running commands on PowerShell to upload my queries to GitHub. When I perform data analysis in Python, I am using Jupyter Notebook.
-
-When performing an analysis for a given dataset I follow the **OSEMN** methodology. Below I explain how I go about this methodology.
-
-### 1. **O**btain
-- I find datasets on Kaggle, government websites or anywhere I can and download them as **.csv** files. When selecting datasets I try to select the ones that are official and have been published for public use.
-### 2. **S**crub
-- I create a copy of the original dataset and perform my cleaning on the copy.
-- Drop columns I don't need.
-- Remove duplicates or irrelevant rows.
-- Fix structural errors like typos, naming conventions, inconsistent strings, etc.
-- Handle and/or replace missing values.
-- Document all the steps I have taken to achieve this clean state.
-### 3. **E**xplore
-- This is where I begin writing queries to find the answers to some of the questions I brainstormed and get a better understanding of the data.
-- I aggregate the data to find percentages, sums, max and min values, and more
-### 4. **M**odel
-- This portion I usually skip because I don't really have any models I run my data through. If I do, the model wasn't made by me...
-### 5. i**N**terpret
-- I record all my findings, summarize them, and make future recommendations.
-- I use **Power BI** or **seaborn/matplotlib.pyplot library** to visualize my findings for better understanding and for easy reporting to others.
+This repository contains data analysis projects using the **OSEMN** approach. Using this approach I find myself continuing to refine my skills in properly cleaning and organizing data, uncovering patterns, generating meaningful insights, and clearly communicating my findings. Building this portfolio is helping me develop a proficiency in SQL, Python and it's data analysis libraries (pandas, numpy, seaborn, Matplotlib), and Power BI. 
 
 # Projects
-1. [NBA Stats 2012-2023](#NBA_stats) - SQL
-2. [Toronto Auto Theft 2014-2023](#toronto_thefts) - SQL
-3. [Video Game Sales 1977-2020](#videogame_sales) - SQL
+1. [NBA Stats 2012-2023](#NBA_stats) - SQL, Power BI
+2. [Toronto Auto Theft 2014-2023](#toronto_thefts) - SQL, Power BI
+3. [Video Game Sales 1977-2020](#videogame_sales) - SQL, Power BI
 4. [Melbourne Housing Snapshot](#melbourne_housing) - Python
 
 ## 1. NBA Stats 2012-2023<a id='NBA_stats'></a>
