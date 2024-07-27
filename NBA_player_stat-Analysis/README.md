@@ -5,6 +5,10 @@ https://www.kaggle.com/datasets/justinas/nba-players-data
 ## Purpose
 To determine top performers in categories like scoring, assists, rebounds, and other categories for each season
 
+## Tools 
+- SQL (Postgres)
+- Power BI
+
 ## Findings:
 1. In the NBA, the average player height is around 200cm or approximately 6'7 consisting of 67 nationalities.
 2. In the 2022-23 season, the top 3 players with the highest ppg are Joel Embiid (PHI) 33.1 ppg, Luka Doncic (DAL) 32.4 ppg, and Damian Lillard (POR) 32.2 ppg.
