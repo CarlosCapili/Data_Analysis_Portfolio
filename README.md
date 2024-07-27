@@ -6,7 +6,7 @@ This repository contains data analysis projects using the **OSEMN** approach. Us
 - SQL (Postgres)
 - Power BI
 
-# Projects
+## Projects
 1. [NBA Stats 2012-2023](#NBA_stats) - SQL, Power BI
 2. [Toronto Auto Theft 2014-2023](#toronto_thefts) - SQL, Power BI
 3. [Video Game Sales 1977-2020](#videogame_sales) - SQL, Power BI
