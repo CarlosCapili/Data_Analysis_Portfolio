@@ -17,7 +17,7 @@ This repository contains data analysis projects using the **OSEMN** approach. Us
 https://www.kaggle.com/datasets/justinas/nba-players-data
 
 ### Purpose
-To determine top performers in categories like scoring, assists, rebounds, and other categories.
+To determine top performers in categories like scoring, assists, rebounds, and other categories for each season
 
 ### Findings:
 1. In the NBA, the average player height is around 200cm or approximately 6'7 consisting of 67 nationalities.
