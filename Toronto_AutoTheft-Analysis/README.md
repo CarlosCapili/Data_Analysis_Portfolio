@@ -23,3 +23,5 @@ With the continuous rise of auto theft crimes in Toronto and within the GTA, it 
 5. In 2014, a total of 3536 auto thefts occurred with 27.7% in residential areas while 8.0% in commercial areas. In 2023 a total of 11517 thefts occurred with 38.8% in residential areas while 7.7% in commercial areas. 
 6. 1 West Humber-Clairville ranks as the number 1 neighbourhood with the most auto thefts from 2014-2023 with 130 Milliken and 159 Etobicoke City Centre ranking 2 and 3 respectively in 2023.
 
+## Dashboard
+![image](https://github.com/CarlosCapili/Power-BI-Dashboards/assets/59804756/59b834a3-f023-4096-a5da-c05742368345)
