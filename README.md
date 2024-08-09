@@ -14,4 +14,5 @@ You can find the projects in their respective folders.
 3. NBA Stats 2012-2023
 4. Melbourne Housing Snapshot
 5. United Nations Population 1950-2021
+6. Most Streamed Spotify Songs 2024
 
