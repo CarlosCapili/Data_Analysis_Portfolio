@@ -15,4 +15,5 @@ You can find the projects in their respective folders.
 4. Melbourne Housing Snapshot
 5. United Nations Population 1950-2021
 6. Most Streamed Spotify Songs 2024
+7. Electric Vehicle Washington State
 
