@@ -44,6 +44,7 @@ To  identify the common ev cars in different regions of Washington State
 8. Volkswagen ID.4 (2.27%)
 9. Ford Mustang Mach-E (1.99%)
 10. Jeep Wrangler (1.98%)
+
 The remaining models make up 37.13% of all registered EV's
 
 - 78.37% of all registered EV's are Battery Electric Vehicle (BEV) while 21.63% are Plug-in Hybrid Electric Vehicle (PHEV)
