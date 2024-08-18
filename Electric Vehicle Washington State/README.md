@@ -10,7 +10,7 @@ To  identify the common ev cars in different regions of Washington State
 
 ## Findings:
 - Top 3 counties with registered EV's are:
-1. King county with 51.63% - 100,061 EV's
+1. King with 51.63% - 100,061 EV's
 2. Snohomish with 11.93% - 23,117 EV's
 3. Pierce with 7.87% - 15,257 EV's
      
