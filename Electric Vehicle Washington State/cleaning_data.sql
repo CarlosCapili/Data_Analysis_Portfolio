@@ -126,10 +126,13 @@ SET electric_range =
 			WHEN make = 'JAGUAR' AND model = 'I-PACE' THEN 292
 			WHEN make = 'KIA' AND model = 'EV6' THEN 310
 			WHEN make = 'KIA' AND model = 'NIRO' THEN 253
+			WHEN make = 'KIA' AND model = 'EV9' THEN 304
+			WHEN make = 'KIA' AND model = 'SOUL EV' THEN 250
 			WHEN make = 'LEXUS' AND model = 'RZ' THEN 220
 			WHEN make = 'LUCID' AND model = 'AIR' THEN 516
 			WHEN make = 'MAZDA' AND model = 'MX-30' THEN 100
-			WHEN make = 'MERCEDES-BENZ' AND (model LIKE 'EQB-CLASS%') THEN 223
+			WHEN make = 'MERCEDES-BENZ' AND (model LIKE 'EQB-CLASS%' OR model LIKE 'EQE-CLASS%' OR model LIKE 'EQS-CLASS%') THEN 223
+			WHEN make = 'MERCEDES-BENZ' AND model = 'ESPRINTER' THEN 248
 			WHEN make = 'MAZDA' AND model = 'ESPRINTER' THEN 248
 			WHEN make = 'MINI' AND model = 'HARDTOP' THEN 114
 			WHEN make = 'NISSAN' AND model = 'ARIYA' THEN 289
@@ -152,7 +155,7 @@ SET electric_range =
 			WHEN make = 'VOLVO' AND model = 'C40' THEN 298
 			WHEN make = 'VOLVO' AND model = 'XC40' THEN 293
 		END
-WHERE electric_range = 0
+WHERE electric_range = 0 OR electric_range IS NULL
 
 -- Create 2 new columns for longitude and latitude in ev_pop_cleaned table
 ALTER TABLE ev_pop_cleaned
