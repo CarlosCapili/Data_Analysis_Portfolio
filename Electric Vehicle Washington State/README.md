@@ -7,6 +7,7 @@ To  identify the common ev cars in different regions of Washington State
 
 ## Tools
 - SQL (Postgres)
+- Power BI
 
 ## Findings:
 - Top 3 counties with registered EV's are:
