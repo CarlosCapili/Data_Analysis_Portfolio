@@ -62,4 +62,10 @@ The remaining models make up 37.13% of all registered EV's
 9. 2018 Chevrolet Volt
 10. 2018 Toyota Prius Prime
 
-- The EV's with the best electric range are 2022/2023/2024 Lucid Air - 516 miles, 2024 Chevrolet Silverado EV - 440 miles, and 2022/2023/2024 Rivian R1T/R1S - 420/410 miles respectively 
+- The EV's with the best electric range are 2022/2023/2024 Lucid Air - 516 miles, 2024 Chevrolet Silverado EV - 440 miles, and 2022/2023/2024 Rivian R1T/R1S - 420/410 miles respectively
+
+## Dashboard
+![image](https://github.com/user-attachments/assets/b5ea94ff-a4de-45a5-b1d2-16f717f45c90)
+![image](https://github.com/user-attachments/assets/6ee55381-e367-44ff-81f4-bd13f6018707)
+![image](https://github.com/user-attachments/assets/6c0d0998-6973-4454-86a9-a2b6f0e4fdad)
+
