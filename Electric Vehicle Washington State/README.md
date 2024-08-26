@@ -3,7 +3,7 @@
 https://catalog.data.gov/dataset/electric-vehicle-population-data
 
 ## Purpose
-To  identify the common ev cars in different regions of Washington State
+To identify common EV's in different regions of Washington State
 
 ## Tools
 - SQL (Postgres)
