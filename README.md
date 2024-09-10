@@ -16,4 +16,5 @@ You can find the projects in their respective folders containing Python and SQL 
 5. United Nations Population 1950-2021
 6. Most Streamed Spotify Songs 2024
 7. Electric Vehicle Washington State
+8. Los Angeles Crime
 
