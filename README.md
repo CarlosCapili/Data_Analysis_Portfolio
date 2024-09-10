@@ -9,12 +9,12 @@ You can find the projects in their respective folders containing Python and SQL 
 - Power BI
 
 ## Projects
-1. Video Game Sales 1977-2020
-2. Toronto Auto Theft 2014-2023
-3. NBA Stats 2012-2023
-4. Melbourne Housing Snapshot
-5. United Nations Population 1950-2021
-6. Most Streamed Spotify Songs 2024
-7. Electric Vehicle Washington State
-8. Los Angeles Crime
+1. Video Game Sales 1977-2020 (SQL, Power BI)
+2. Toronto Auto Theft 2014-2023 (SQL, Power BI)
+3. NBA Stats 2012-2023 - (SQL, Power BI)
+4. Melbourne Housing Snapshot (Python, Jupyter Notebook)
+5. United Nations Population 1950-2021 (Power BI)
+6. Most Streamed Spotify Songs 2024 (Python, Jupyter Notebook)
+7. Electric Vehicle Washington State (SQL, Power BI)
+8. Los Angeles Crime (Python, Jupyter Notebook)
 
