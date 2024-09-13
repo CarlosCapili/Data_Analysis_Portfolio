@@ -24,6 +24,6 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 - 42% of reported crimes have weapons used, with the most common weapon being a persons hands, fist, feet, or any bodily force
 - 51% of crimes are reported on the day of occurrence, with 19% reported the next day, and 16% reported within 2-7 days
 - The top 3 locations for crime are:
-  - Single Family Dweliing (28%)
+  - Single Family Dwelling (28%)
   - Street (23%)
   - Multi-Unit Dwelling (Apartment, Duplex, etc) (20%)
