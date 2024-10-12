@@ -20,5 +20,4 @@ To compare various diagnosis-related groups (DRG) charges and payments across di
   1. California - $67,508.52
   2. New Jersey - $66,125.69
   3. Nevada - $61,047.12
--
 
