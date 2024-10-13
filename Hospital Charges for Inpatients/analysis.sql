@@ -48,7 +48,28 @@ FROM working_data
 WHERE drg_def = '690 - KIDNEY & URINARY TRACT INFECTIONS W/O MCC'
 GROUP BY prov_state
 ORDER BY mean_cov_chrgs DESC
-	
+
+-- What is the most expensive and least expensive state mean cover charges for each DRG?
+WITH state_charges AS (
+	SELECT
+		drg_def,
+		prov_state,
+		ROUND(AVG(avg_cov_chrgs)::numeric, 2) AS mean_cov_chrgs,
+		DENSE_RANK() OVER(PARTITION BY drg_def ORDER BY ROUND(AVG(avg_cov_chrgs)::numeric, 2) DESC) AS dr_most,
+		DENSE_RANK() OVER(PARTITION BY drg_def ORDER BY ROUND(AVG(avg_cov_chrgs)::numeric, 2)) AS dr_least
+	FROM working_data
+	GROUP BY drg_def, prov_state
+)
+
+SELECT 
+	drg_def,
+	MAX(CASE WHEN dr_most = 1 THEN prov_state END) AS highest_cover_chrg_state,
+	MAX(CASE WHEN dr_most = 1 THEN mean_cov_chrgs END) AS highest_cover_chrg,
+	MAX(CASE WHEN dr_least = 1 THEN prov_state END) AS lowest_cover_chrg_state,
+	MAX(CASE WHEN dr_least = 1 THEN mean_cov_chrgs END) AS lowest_cover_chrg
+FROM state_charges
+GROUP BY drg_def
+
 -- How do different states compare to average charges and payments?
 SELECT
 	prov_state,
