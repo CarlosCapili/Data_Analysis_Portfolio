@@ -19,4 +19,6 @@ You can find the projects in their respective folders containing Python and SQL 
 8. Los Angeles Crime (Python, Jupyter Notebook)
 9. Netflix Movies and TV Shows (SQL, Python, Jupyter Notebook)
 10. Hospital Charges for Inpatients (SQL)
+11. Fictional CRM Sales Opportunities (SQL, Power BI)
+12. UFC Stats (Python, Jupyter Notebook)
 
