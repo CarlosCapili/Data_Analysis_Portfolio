@@ -65,6 +65,12 @@ ALTER TABLE liquor_sd_clean
 UPDATE liquor_sd_clean
 	SET month_name = TO_CHAR((DATE '2000-01-01' + (month - 1) * INTERVAL '1 month'), 'Month')
 
+-- Add column for total sales (retail + warehouse sales)
+ALTER TABLE liquor_sd_clean
+	ADD COLUMN total_sales numeric
+UPDATE liquor_sd_clean
+	SET total_sales = retail_sales + warehouse_sales
+
 SELECT * FROM liquor_sd_clean 
 
 	
