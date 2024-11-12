@@ -21,4 +21,5 @@ You can find the projects in their respective folders containing Python and SQL 
 10. Hospital Charges for Inpatients (SQL)
 11. Fictional CRM Sales Opportunities (SQL, Power BI)
 12. UFC Stats (Python, Jupyter Notebook)
+13. Liquor Retail and Warehouse Sales (SQL, Power BI)
 
