@@ -21,7 +21,7 @@ ALTER TABLE liquor_sd_clean
 ALTER TABLE liquor_sd_clean
 	RENAME COLUMN "WAREHOUSE SALES" TO warehouse_sales
 
-Add a primary key 
+--- Add a primary key 
 ALTER TABLE liquor_sd_clean
 	ADD COLUMN id SERIAL PRIMARY KEY 
 
