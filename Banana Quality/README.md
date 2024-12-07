@@ -12,7 +12,10 @@ To perform descriptive analysis on a banana dataset
 ## Findings:
 There are several regions 
 
-Banana Type | Avg. Length (cm) | Avg. Weight (g) | Avg. Quality Score |  
+| Banana Type | Avg. Length (cm) | Avg. Weight (g) | Avg. Quality Score |  
+|-------------|------------------|-----------------|--------------------|
+|
+|
  
 
 
