@@ -44,6 +44,6 @@ To perform descriptive analysis on a banana dataset
 | Ripe | 4.01 - 6.00 |
 | Overripe | > 6.00 |
 
-
+Make a table based on region and their attributes
  
 
