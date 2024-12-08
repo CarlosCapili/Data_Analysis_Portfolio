@@ -21,7 +21,6 @@ To perform descriptive analysis on a banana dataset
 | Premium | > 3.50 |
 
 - All regions produce a majority banana quality of  'Processing' and 'Good'
-
 - There are 8 banana types. The table below shows several attributes:
 
 | Banana Type | Avg. Quality Score | Avg. Weight (g) | Avg. Length (cm) |  
