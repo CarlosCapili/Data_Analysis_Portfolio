@@ -13,7 +13,7 @@ To perform descriptive analysis on a banana dataset
 - It is known that banana's grow in tropical regions around the world. The regions in this dataset include: Brazil, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, India, and Philippines
 - The quality of a banana can be categorized by the quality score where:
 | Quality Category | Range |
-|---|---|
+|------------------|-------|
 | Unripe | <= 1.50 |
 | Processing | 1.51 - 2.50 |
 | Good | 2.51 - 3.50 |
