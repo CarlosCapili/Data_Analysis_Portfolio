@@ -1,0 +1,21 @@
+CREATE TABLE consumer_data (
+	"Customer ID" int PRIMARY KEY, 
+	Age int,
+	Gender text,
+	"Item Purchased" text,
+	Category text,
+	"Purchase Amount (USD)" int,
+	Location text,
+	Size text,
+	Color text,
+	Season text,
+	"Review Rating" numeric, 
+	"Subscription Status" varchar(3),
+	"Payment Method" text,
+	"Shipping Type" text,
+	"Discount Applied" varchar(3),
+	"Promo Code Used" varchar(3),
+	"Previous Purchases" int,
+	"Preferred Payment Method" text,
+	"Frequency of Purchases" text
+)
