@@ -40,8 +40,9 @@ To identify trends in consumer retail purchasing
 | Clothing | Shorts | 9,433 | 60.08 |
 
 - Since these items are the most popular, inventory for these items at each location should be prioritized. It is a good idea to look into promotions or discounts for these items.
-
-- 
+- There is no real difference between spending during seasons. The total spendings for each season are very similar in value with Fall at $60,0018, Spring at $58,679, Winter at $58,607, and Summer at $55,777. People just buy whenever they want to.
+- Discounts have no impact on the average amount spent by season. Usually, consumers will spend more on average when there a discount is used. However, the data shows this is not the case.
+- From this dataset, 57% of consumers do not use promo codes while 43% do.
 
 
 
