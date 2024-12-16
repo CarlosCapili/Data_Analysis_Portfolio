@@ -25,6 +25,7 @@ To identify trends in consumer retail purchasing
 - It can be seen that the average spending for a consumer for each category is around $60. However, consumers choose to spend more money on buying clothing and accesories. 
 
 - The top 10 popular items consumers spend their money on are:
+  
 | Category | Item | Total Amount Spent ($ USD) | Average Amount Spent ($ USD) |
 |-|-|-|-|
 | Clothing | Blouse | 10,410 | 60.88 |
