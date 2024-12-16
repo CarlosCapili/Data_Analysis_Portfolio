@@ -10,6 +10,32 @@ To identify trends in consumer retail purchasing
 - pgAdmin4
 
 ## Findings:
+
+### Age/Gender/Location Distribution
+
+- The the majority of the dataset contains consumers between the ages of 25-64
+
+| Age Group | Count |
+|-|-|
+| 18-24 | 486 |
+| 25-34 | 755 |
+| 34-44 | 729 |
+| 45-54 | 752 |
+| 55-64 | 751 |
+| 65+ | 427 |
+
+- There are more male consumers than female consumers
+
+| Gender | Count |
+|-|-|
+| Female | 1248 |
+| Male | 2652 |
+
+- All 50 states are represented in the dataset, Montana having the most consumer entries at 96, while Rhode Island has the least at 63
+
+  
+### Customer Spending 
+
 - Males spend an average of $59.54 USD while females spend an average of $60.25 USD
 - The average spending between age groups by gender is similar to average spending by gender, differing only by a few dollars. It can be said that for each age group the average spending can range from $57 - $62
 
