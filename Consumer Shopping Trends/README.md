@@ -61,8 +61,6 @@ To identify trends in consumer retail purchasing
 
 - It can be seen that the average spending for a consumer for each category is around $60. However, consumers choose to spend more money on buying clothing and accesories.
 
-
-
 - Since the top 2 categories consumers spend there money on are clothing and accessories, the top 10 items money is spent on will be of these categories. Some of the most bought clothing items are the blouse, shirt, and dress, while jewelry and sunglasses are some of the most bought for accessories.
   
 | Category | Item | Total Amount Spent ($ USD) | Average Amount Spent ($ USD) |
@@ -78,7 +76,11 @@ To identify trends in consumer retail purchasing
 | Clothing | Sweater | 9,462 | 57.70 |
 | Clothing | Shorts | 9,433 | 60.08 |
 
-- On average 
+- The following list will display the item in each category with highest average purchase amount for each gender in all age groups. This will give insight to the items target audience.
+
+
+
+
 
 - There is no real difference between spending during seasons. The total spendings for each season are very similar in value with Fall at $60,0018 with an average purchase amount of $61.56, Spring at $58,679 with an average purchase amount of $58.74, Winter at $58,607 with an average purchase amount of $60.36, and Summer at $55,777 with an average purchase amount of $58.41. People just buy items whenever they want.
   
