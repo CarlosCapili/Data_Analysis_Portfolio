@@ -1,6 +1,6 @@
 -- General Statistics 
 
-What are the total number of purchases?
+-- What are the total number of purchases?
 SELECT 
 	COUNT(*) AS total_purchases
 FROM consumer_clean
@@ -121,15 +121,37 @@ GROUP BY category, item_purchased
 ORDER BY category, total_purchase_amt DESC
 
 -- What items are consumers spending there money on per age group? 
-SELECT
-	category,
+WITH top_items AS (
+	SELECT
+		age_group,
+		gender,
+		category,
+		item_purchased,
+		ROUND(SUM(purchase_amt_usd), 2) AS total_purchase_amt,
+		ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt,
+		DENSE_RANK() OVER(PARTITION BY age_group, gender ORDER BY ROUND(AVG(purchase_amt_usd), 2) DESC) AS dr
+	FROM consumer_clean
+	GROUP BY age_group,gender, category, item_purchased
+)
+
+SELECT 
 	age_group,
+	gender,
+	category,
 	item_purchased,
-	ROUND(SUM(purchase_amt_usd), 2) AS total_purchase_amt,
+	avg_purchase_amt
+FROM top_items
+WHERE dr = 1
+ORDER BY gender, age_group
+
+What is the average purchase amount for each category for each gender?
+SELECT 
+	gender,
+	category,
 	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
 FROM consumer_clean
-GROUP BY category, age_group, item_purchased
-ORDER BY category, age_group, total_purchase_amt DESC
+GROUP BY gender, category
+ORDER BY gender
 
 -- Seasonal Trends
 
