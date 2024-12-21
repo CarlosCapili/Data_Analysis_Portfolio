@@ -23,3 +23,4 @@ You can find the projects in their respective folders containing Python and SQL 
 12. UFC Stats (Python, Jupyter Notebook)
 13. Liquor Retail and Warehouse Sales (SQL, Power BI)
 14. Banana Quality (Python, Jupyter Notebook)
+15. Consumer Trends (SQL)
