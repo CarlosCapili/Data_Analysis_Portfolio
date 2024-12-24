@@ -11,8 +11,6 @@ To identify trends in consumer retail purchasing
 
 ## Findings:
 
-### Age/Gender/Location Distribution
-
 ### General Stats
 - The majority of the dataset contains consumers between the ages of 25-64
 
