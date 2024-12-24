@@ -9,7 +9,7 @@ To identify trends in consumer retail purchasing
 - SQL
 - pgAdmin4
 
-## Findings:
+## Findings
 
 ### General Stats
 - The majority of the dataset contains consumers between the ages of 25-64
@@ -61,7 +61,7 @@ To identify trends in consumer retail purchasing
   
 | Category | Item | Total Amount Spent ($ USD) | Average Amount Spent ($ USD) |
 |-|-|-|-|
-| Clothing | Blouse | 10,410 | 60.88 |s
+| Clothing | Blouse | 10,410 | 60.88 |
 | Clothing | Shirt | 10,332 | 61.14 |
 | Clothing | Dress | 10,320 | 62.17 |
 | Clothing | Pants | 10,090 | 59.01 |
