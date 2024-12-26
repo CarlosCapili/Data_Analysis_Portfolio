@@ -8,6 +8,7 @@ To identify trends in consumer retail purchasing
 ## Tools
 - SQL
 - pgAdmin4
+- Power BI
 
 ## Findings
 
@@ -108,6 +109,8 @@ Females
 - 57% of consumers DO NOT use promo codes.
 - Clothing is the category that uses the most promo codes during purchase while Outerwear is the least.
 
+## Dashboard
+![image](https://github.com/user-attachments/assets/281409f7-5ab5-4b67-9d16-be34b7811a65)
 
 
  
