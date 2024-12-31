@@ -24,3 +24,4 @@ You can find the projects in their respective folders containing Python and SQL 
 13. Liquor Retail and Warehouse Sales (SQL, Power BI)
 14. Banana Quality (Python, Jupyter Notebook)
 15. Consumer Trends (SQL)
+16. Historical S&P 500 Companies (Python, Power BI)
