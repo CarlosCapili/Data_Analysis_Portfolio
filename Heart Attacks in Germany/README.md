@@ -10,11 +10,10 @@ To generate insights about heart attack occurences in Germany
 - pgAdmin4
 
 ## Findings
-- 15.01% of males and 14.76% of females experience heart attacks
-- As of 2023 14.68% of males have experienced heart attacks, the lowest it has been since 2018 at 14.57%. Similarly, 14.47% of females have experienced heart attacks which is the lowest it has been since 2016 at 14.39%.
-- 14.80% of youths (under 25 years) and 15.10% of adults (25+ years) experience heart attacks
-- 15.13% of people in living in the state of Hesse experience heart attacks making it the number 1 heart attack prone state in Germany, followed by the state of Berlin with 15.12% of the population experience heart attacks.
-- Rural areas are more heart attack prone with 15.04% of people experiencing heart attacks while urban areas at 14.97%.
+- 15.01% of males experienced heart attacks while 14.76% of females experienced heart attacks. 50.27% of heart attack incidences were male while 49.73% were female.
+- 15.10% of adults (25+ years) experienced heart attacks while 14.80% of youths (under 25 years) experienced heart attacks. 70.47% of heart attack incidences were adults while 29.53% are youths.
+- 15.13% of people in the state of Hesse experience heart attacks making it the number 1 heart attack prone state in Germany, followed by the state of Berlin with 15.12% of people experiencing heart attacks.
+- 15.04% of people living in rural areas experience heart attacks whereas 14.97% in urban areas. 50.14% of heart attacks occur in rural areas while 49.86% occur in urban areas.
 - There are 3 groups of smoking statuses: non-smoker, smoker, and former smoker. It was found that non-smokers have the highest heart attack incidence percentage at 15.03% followed by smokers at 15.01%.
 - 15.18% of individuals who had an average diet quality experienced heart attacks as opposed to 14.84% who had a good diet quality, while 15% of individuals with a poor diet quality experience heart attacks.
 - Having low physical activity affected 15.10% of individuals 
