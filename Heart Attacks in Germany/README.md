@@ -3,7 +3,7 @@
 https://www.kaggle.com/datasets/ankushpanday1/heart-attack-in-youth-vs-adult-in-germany
 
 ## Purpose
-To generate insights about heart attack occurences in Germany
+To generate and report insights about heart attack occurences in Germany.
 
 ## Tools
 - SQL
@@ -19,6 +19,8 @@ To generate insights about heart attack occurences in Germany
 - Having low physical activity affected 15.10% of individuals 
 - Of the people who experienced heart attacks, 30.1% have heart attacks from family history, 39.5% from hypertension, and 20.2% have diabetes.
 
+## Dashboard
+![image](https://github.com/user-attachments/assets/ad2908df-43de-498d-bbfe-9761ae1195b2)
 
  
 
