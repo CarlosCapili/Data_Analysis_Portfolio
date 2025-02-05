@@ -20,7 +20,8 @@ To generate and report insights about heart attack occurences in Germany.
 - Of the people who experienced heart attacks, 30.1% have heart attacks from family history, 39.5% from hypertension, and 20.2% have diabetes.
 
 ## Dashboard
-![image](https://github.com/user-attachments/assets/ad2908df-43de-498d-bbfe-9761ae1195b2)
+![image](https://github.com/user-attachments/assets/221f2a58-3cbb-48e8-9eda-e57d474486e0)
+
 
  
 
