@@ -25,4 +25,4 @@ You can find the projects in their respective folders containing Python and SQL 
 14. Banana Quality (Python, Jupyter Notebook)
 15. Consumer Trends (SQL, Power BI)
 16. Historical S&P 500 Companies (Python, Power BI)
-17. Heart Attacks in Germany (SQL)
+17. Heart Attacks in Germany (SQL, Power BI)
