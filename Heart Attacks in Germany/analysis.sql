@@ -35,6 +35,15 @@ FROM ht_data
 GROUP BY urban_rural
 ORDER BY heart_attack_pct DESC 
 
+-- What is the percentage of urban and rural areas that experienced heart attacks
+SELECT
+	urban_rural,
+	COUNT(*) AS total_heart_attacks,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ht_data WHERE heart_attack_incidence = 1), 2) AS age_group_pct
+FROM ht_data
+WHERE heart_attack_incidence = 1
+GROUP BY urban_rural
+
 -- Gender trends
 
 -- Which gender experiences more heart attacks?
@@ -45,6 +54,16 @@ SELECT
 	ROUND(SUM(heart_attack_incidence) * 100.0 / COUNT(*), 2) AS heart_attack_pct
 FROM ht_data
 WHERE gender IN ('Male', 'Female')
+GROUP BY gender
+
+-- What is the percentage of adults and youths that experienced heart attacks
+SELECT
+	gender,
+	COUNT(*) AS total_heart_attacks,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ht_data WHERE heart_attack_incidence = 1 AND gender IN ('Male', 'Female')), 2) AS age_group_pct
+FROM ht_data
+WHERE heart_attack_incidence = 1
+	AND gender IN ('Male', 'Female')
 GROUP BY gender
 
 -- Age group comparisons
@@ -58,6 +77,15 @@ SELECT
 FROM ht_data
 GROUP BY age_group
 ORDER BY heart_attack_pct DESC
+
+-- What is the percentage of adults and youths that experienced heart attacks
+SELECT
+	age_group,
+	COUNT(*) AS total_heart_attacks,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ht_data WHERE heart_attack_incidence = 1), 2) AS age_group_pct
+FROM ht_data
+WHERE heart_attack_incidence = 1
+GROUP BY age_group
 
 -- Yearly comparisons
 
@@ -151,4 +179,3 @@ SELECT
 FROM ht_data
 GROUP BY diet_quality
 
-SELECT * FROM ht_data ORDER BY id
