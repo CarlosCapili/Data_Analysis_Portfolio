@@ -9,7 +9,8 @@ The complete end-to-end data analysis process is used for every project - if not
 4. Interpretation and visualization 
 
 ## Projects
-### Video Game Sales 1977-2020 (SQL, Power BI)
+### Video Game Sales (SQL, Power BI)
+[[lool]](https://github.com/CarlosCapili/Data_Analysis_Portfolio/tree/main/VideoGame_Sales-Analysis)
 3. Toronto Auto Theft 2014-2023 (SQL, Power BI)
 4. NBA Stats 2012-2023 - (SQL, Power BI)
 5. Melbourne Housing Snapshot (Python, Jupyter Notebook)
