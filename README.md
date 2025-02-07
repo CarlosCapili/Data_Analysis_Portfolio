@@ -1,28 +1,28 @@
 # Data Analysis Portfolio
-This repository contains data analysis projects on pretty much any topic I find interesting.
+This repository contains complete data analysis projects using datasets of various topics. Every project folder contains a summary featuring the source data, tools and technologies used, findings, and visualizations. 
 
-You can find the projects in their respective folders containing Python and SQL code, and a Power BI dashboard.
-
-## Tools
-- Python (pandas, seaborn, numpy, Matplotlib)
-- SQL (Postgres)
-- Power BI
+## Data Analysis Framework
+The complete end-to-end data analysis process is used for every project - if not, then as much as the process that can be followed.
+1. Data collection (Kaggle, Web Scraping, Data.gov, etc.)
+2. Cleaning and transformation (Removing duplicates, handling missing values, standardize formats, validate ranges, rename columns, convert data types, add new features, etc)
+3. Exploration
+4. Interpretation and visualization 
 
 ## Projects
-1. Video Game Sales 1977-2020 (SQL, Power BI)
-2. Toronto Auto Theft 2014-2023 (SQL, Power BI)
-3. NBA Stats 2012-2023 - (SQL, Power BI)
-4. Melbourne Housing Snapshot (Python, Jupyter Notebook)
-5. United Nations Population 1950-2021 (Power BI)
-6. Most Streamed Spotify Songs 2024 (Python, Jupyter Notebook)
-7. Electric Vehicle Washington State (SQL, Power BI)
-8. Los Angeles Crime (Python, Jupyter Notebook)
-9. Netflix Movies and TV Shows (SQL, Python, Jupyter Notebook)
-10. Hospital Charges for Inpatients (SQL)
-11. Fictional CRM Sales Opportunities (SQL, Power BI)
-12. UFC Stats (Python, Jupyter Notebook)
-13. Liquor Retail and Warehouse Sales (SQL, Power BI)
-14. Banana Quality (Python, Jupyter Notebook)
-15. Consumer Trends (SQL, Power BI)
-16. Historical S&P 500 Companies (Python, Power BI)
-17. Heart Attacks in Germany (SQL, Power BI)
+### Video Game Sales 1977-2020 (SQL, Power BI)
+3. Toronto Auto Theft 2014-2023 (SQL, Power BI)
+4. NBA Stats 2012-2023 - (SQL, Power BI)
+5. Melbourne Housing Snapshot (Python, Jupyter Notebook)
+6. United Nations Population 1950-2021 (Power BI)
+7. Most Streamed Spotify Songs 2024 (Python, Jupyter Notebook)
+8. Electric Vehicle Washington State (SQL, Power BI)
+9. Los Angeles Crime (Python, Jupyter Notebook)
+10. Netflix Movies and TV Shows (SQL, Python, Jupyter Notebook)
+11. Hospital Charges for Inpatients (SQL)
+12. Fictional CRM Sales Opportunities (SQL, Power BI)
+13. UFC Stats (Python, Jupyter Notebook)
+14. Liquor Retail and Warehouse Sales (SQL, Power BI)
+15. Banana Quality (Python, Jupyter Notebook)
+16. Consumer Trends (SQL, Power BI)
+17. Historical S&P 500 Companies (Python, Power BI)
+18. Heart Attacks in Germany (SQL, Power BI)
