@@ -9,8 +9,11 @@ The complete end-to-end data analysis process is used for every project - if not
 4. Interpretation and visualization 
 
 ## Projects
+*Tip: hold the CTRL button when clicking the link to the project folder to open a new tab*
+
 ### Video Game Sales (SQL, Power BI)
-[[lool]](https://github.com/CarlosCapili/Data_Analysis_Portfolio/tree/main/VideoGame_Sales-Analysis)
+[[Project Folder]](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/VideoGame_Sales-Analysis)
+
 
 
 
