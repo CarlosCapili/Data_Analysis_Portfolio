@@ -10,9 +10,10 @@ The complete end-to-end data analysis process is used for every project - if not
 
 ## Projects
 *Tip: hold the CTRL button when clicking the link to the project folder to open a new tab*
+| Name | Purpose |
+|-|-|
+| ### Video Game Sales - [[Go to Project]](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/VideoGame_Sales-Analysis) | To find out what are the top selling games/franchises, publishers, genres, and more, in the past decades| 
 
-### Video Game Sales - [[Go to Project]](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/VideoGame_Sales-Analysis)
-Purpose: To find out what are the top selling games/franchises, publishers, genres, and more, in the past decades
 
 
 
