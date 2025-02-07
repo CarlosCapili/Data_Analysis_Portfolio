@@ -9,21 +9,16 @@ The complete end-to-end data analysis process is used for every project - if not
 4. Interpretation and visualization 
 
 ## Projects
-*Tip: hold the CTRL button when clicking the link to the project folder to open a new tab*
-| Name | Purpose |
-|-|-|
-| ### Video Game Sales - [[Go to Project]](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/VideoGame_Sales-Analysis) | To find out what are the top selling games/franchises, publishers, genres, and more, in the past decades| 
+*Tip: hold the CTRL button when clicking the project name to open the project in a new tab*
+| Name | Tools Used | Purpose |
+|-|-|-|
+| [Video Game Sales](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/VideoGame_Sales-Analysis) | SQL, Power BI | To find out what are the top selling games/franchises, publishers, genres, and more, in the past decades| 
+| [Toronto Auto Theft](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Toronto_AutoTheft-Analysis) | SQL, Power BI | To gain insights on the rise of auto thefts in Toronto by identifying auto theft trends, location hotspots, and more |
+| [NBA Stats](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/NBA_player_stat-Analysis) | SQL, Power BI | To determine top performers in categories like scoring, assists, and rebounds, for each season |
+| [Melbourne Housing Snapshot](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Melbourne_Housing_Snapshot-Analysis) | Python, Jupyter Notebook | To perform exploratory data analysis and identify trends and patterns regarding housing prices in Melbourne | 
+| [United Nations World Population Dashboard](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/United_Nations_Population) | Power BI | To create a dashboard describing a country's population demographics over the years |
+| [Most Streamed Spotify Songs 2024](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Most%20Streamed%20Spotify%20Songs%202024) | Python, Jupyter Notebook | To compare song streaming numbers on different platforms and find the most streamed songs in 2024 |
 
-
-
-
-
-
-3. Toronto Auto Theft 2014-2023 (SQL, Power BI)
-4. NBA Stats 2012-2023 - (SQL, Power BI)
-5. Melbourne Housing Snapshot (Python, Jupyter Notebook)
-6. United Nations Population 1950-2021 (Power BI)
-7. Most Streamed Spotify Songs 2024 (Python, Jupyter Notebook)
 8. Electric Vehicle Washington State (SQL, Power BI)
 9. Los Angeles Crime (Python, Jupyter Notebook)
 10. Netflix Movies and TV Shows (SQL, Python, Jupyter Notebook)
