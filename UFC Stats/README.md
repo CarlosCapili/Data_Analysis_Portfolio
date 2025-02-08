@@ -3,7 +3,7 @@
 https://www.kaggle.com/datasets/aaronfriasr/ufc-fighters-statistics
 
 ## Purpose
-To perform exploratory data analysis create visuals based on discoveries
+To analyze UFC stats and report findings
 
 ## Tools
 - Python (pandas, numpy, matplotlib, seaborn) 
