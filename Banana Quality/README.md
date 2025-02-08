@@ -3,7 +3,7 @@
 https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset
 
 ## Purpose
-To perform descriptive analysis on a banana dataset 
+To analyze banana quality from various countries.
 
 ## Tools
 - Python (pandas, seabporn, matplotlib)
