@@ -18,15 +18,14 @@ The complete end-to-end data analysis process is used for every project - if not
 | [Melbourne Housing Snapshot](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Melbourne_Housing_Snapshot-Analysis) | Python, Jupyter Notebook | To perform exploratory data analysis and identify trends and patterns regarding housing prices in Melbourne | 
 | [United Nations World Population Dashboard](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/United_Nations_Population) | Power BI | To create a dashboard describing a country's population demographics over the years |
 | [Most Streamed Spotify Songs 2024](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Most%20Streamed%20Spotify%20Songs%202024) | Python, Jupyter Notebook | To compare song streaming numbers on different platforms and find the most streamed songs in 2024 |
-
-8. Electric Vehicle Washington State (SQL, Power BI)
-9. Los Angeles Crime (Python, Jupyter Notebook)
-10. Netflix Movies and TV Shows (SQL, Python, Jupyter Notebook)
-11. Hospital Charges for Inpatients (SQL)
-12. Fictional CRM Sales Opportunities (SQL, Power BI)
-13. UFC Stats (Python, Jupyter Notebook)
-14. Liquor Retail and Warehouse Sales (SQL, Power BI)
-15. Banana Quality (Python, Jupyter Notebook)
-16. Consumer Trends (SQL, Power BI)
-17. Historical S&P 500 Companies (Python, Power BI)
-18. Heart Attacks in Germany (SQL, Power BI)
+| [Electric Vehicle Washington State](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Electric%20Vehicle%20Washington%20State) |  SQL, Power BI | To generate insights on EV adoption trends in Washington State | 
+| [Los Angeles Crime](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Los%20Angeles%20Crime) | Python, Jupyter Notebook | To report crime demographics for a better understanding of crime in Los Angeles |
+| [Netflix Movies and TV Shows](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Netflix%20Movies%20and%20TV%20Shows) | SQL, Python, Jupyter Notebook | To provide a breakdown on Netflix content by movies/TV, directors, etc. |
+| [Hospital Charges for Inpatients](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Hospital%20Charges%20for%20Inpatients) | SQL | To compare various diagnosis-related groups (DRG) charges and payments across different states | 
+| [Fictional CRM Sales Opportunities](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Fictional%20CRM%20Sales%20Opportunities) | SQL, Power BI | To determine how each sales agent/team/regional office is performing, what are the highest selling products, which sector is generating the most money, etc. | 
+| [UFC Stats](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/UFC%20Stats) | Python, Jupyter Notebook | To analyze UFC stats and report findings | 
+| [Liquor Retail and Warehouse Sales](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Liquor%20Retail%20and%20Warehouse%20Sales) | SQL, Power BI | To create a dashboard displaying sales figures |
+| [Banana Quality](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Banana%20Quality) | Python, Jupyter Notebook | To analyze banana quality from various countries | 
+| [Consumer Trends](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Consumer%20Shopping%20Trends) | SQL, Power BI | To identify trends in consumer retail purchasing | 
+| [Historical S&P 500 Companies](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Historical%20S%26P%20500%20Stock%20Market) | Python, Power BI | To create a dashboard to showcase stock market information about S&P 500 companies from 2018-2023 |
+| [Heart Attacks in Germany](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Heart%20Attacks%20in%20Germany) | SQL, Power BI | To generate and report insights about heart attack occurences in Germany |
