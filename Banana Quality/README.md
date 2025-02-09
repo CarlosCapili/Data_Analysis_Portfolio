@@ -23,6 +23,8 @@ To analyze banana characteristics from various countries and determine which cou
 | Cavendish   | 2.43               | **170.63**          | *18.85*            | 4.05           | 18.56                | **2.82**           |
 | Fehi        | 2.43               | *156.17*          | 19.87            | 4.03           | 18.26                | 2.73           |
 | Manzano     | *2.39*               | 168.34          | **20.90**            | *3.72*           | *18.19*                | 2.77           |
+
+
 *Bolded values represent the max value and italics represent the min value in each column*
 
 - Lady Finger's have the highest average quality score of 2.53
@@ -35,7 +37,7 @@ To analyze banana characteristics from various countries and determine which cou
 - The following table will show each banana type and show which country offers the best of the characteristic
  
 | Banana Type | Highest Avg. Quality Score | Longest Avg. Length (cm) | Heaviest Avg. Weight (g) |
-|-|-|-|
+|-|-|-|-|
 | Manzano | Guatemala, 2.59 | Honduras, 22.49 | Costa Rica, 184.75 | 
 | Plantain | Brazil, 2.62 | Brazil, 20.57 | Honduras, 184.85 |
 | Burro | Costa Rica, 2.75 | Ecuador, 22.21 | Ecuador, 192.09 |
