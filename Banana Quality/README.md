@@ -3,14 +3,14 @@
 https://www.kaggle.com/datasets/mrmars1010/banana-quality-dataset
 
 ## Purpose
-To analyze banana quality from various countries.
+To analyze banana characteristics from various countries and determine which countries to import bananas based on banana needs.
 
 ## Tools
 - Python (pandas, seabporn, matplotlib)
 - Jupyter Notebook
 
 ## Findings:
-- It is known that banana's grow in tropical regions around the world. The regions in this dataset include: Brazil, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, India, and Philippines
+- There are 8 countries to import bananas from: Brazil, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, India, and Philippines
 - The quality of a banana can be categorized by the quality score and is shown in the table below
 
 | Quality Category | Quality Score |
