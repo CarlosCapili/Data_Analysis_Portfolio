@@ -11,8 +11,9 @@ To analyze banana characteristics from various countries and determine which cou
 
 ## Findings:
 - There are 8 countries exporting bananas: Brazil, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, India, and Philippines
-- There are 8 types of bananas. The table below shows the average characteristics of each type:
 
+There are 8 types of bananas. The table below shows the average characteristics of each type:
+*Bolded values represent the max value and italics represent the min value in each column*
 | Banana Type | Avg. Quality Score | Avg. Weight (g) | Avg. Length (cm) | Ripeness Index | Suger Content (brix) | Firmness (kgf) |
 |-------------|--------------------|-----------------|------------------|----------------|----------------------|----------------|
 | Lady Finger | **2.53**               | 162.80          | 19.57            | **4.23**           | **18.86**                | 2.68           |
@@ -24,9 +25,6 @@ To analyze banana characteristics from various countries and determine which cou
 | Fehi        | 2.43               | *156.17*          | 19.87            | 4.03           | 18.26                | 2.73           |
 | Manzano     | *2.39*               | 168.34          | **20.90**            | *3.72*           | *18.19*                | 2.77           |
 
-
-*Bolded values represent the max value and italics represent the min value in each column*
-
 - Lady Finger's have the highest average quality score of 2.53
 - Cavendish are the heaviest banana type with an average weight of 170.63g
 - Manzano banana's have the longest average length of 20.90cm
@@ -34,8 +32,7 @@ To analyze banana characteristics from various countries and determine which cou
 - Lady Finger's have the most sugar content at 18.86brix
 - Cavendish are the most firm bananas at 2.82kgf
 
-- The following table will show each banana type and show which country offers the best of the characteristic
- 
+The following table will show each banana type and show which country offers the best of the characteristic
 | Banana Type | Highest Avg. Quality Score | Longest Avg. Length (cm) | Heaviest Avg. Weight (g) |
 |-|-|-|-|
 | Manzano | Guatemala, 2.59 | Honduras, 22.49 | Costa Rica, 184.75 | 
