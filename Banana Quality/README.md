@@ -10,7 +10,24 @@ To analyze banana characteristics from various countries and determine which cou
 - Jupyter Notebook
 
 ## Findings:
-- There are 8 countries to import bananas from: Brazil, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, India, and Philippines
+- There are 8 countries exporting bananas: Brazil, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, India, and Philippines
+- There are 8 types of bananas. The table below shows the average characteristics of each type:
+
+| Banana Type | Avg. Quality Score | Avg. Weight (g) | Avg. Length (cm) | Ripeness Index | Suger Content (brix) | Firmness (kgf) |
+|-------------|--------------------|-----------------|------------------|----------------|----------------------|----------------|
+| Lady Finger | **2.53**               | 162.80          | 19.57            | **4.23**           | **18.86**                | 2.68           |
+| Blue Java   | 2.52               | 164.62          | 20.75            | **4.23**           | 18.39                | 2.59           |
+| Burro       | 2.51               | 164.90          | 20.41            | 4.06           | 18.62                | *2.52*           |
+| Plantain    | 2.46               | 166.04          | 18.93            | 4.09           | 18.71                | 2.72           |
+| Red Dacca   | 2.45               | 164.43          | 20.15            | 3.94           | 18.52                | 2.80           |
+| Cavendish   | 2.43               | **170.63**          | *18.85*            | 4.05           | 18.56                | **2.82**           |
+| Fehi        | 2.43               | *156.17*          | 19.87            | 4.03           | 18.26                | 2.73           |
+| Manzano     | *2.39*               | 168.34          | **20.90**            | *3.72*           | *18.19*                | 2.77           |
+
+
+
+
+
 - The quality of a banana can be categorized by the quality score and is shown in the table below
 
 | Quality Category | Quality Score |
@@ -21,18 +38,6 @@ To analyze banana characteristics from various countries and determine which cou
 | Premium | > 3.50 |
 
 - All regions produce a majority banana quality of  'Processing' and 'Good'
-- There are 8 banana types. The table below shows several attributes:
-
-| Banana Type | Avg. Quality Score | Avg. Weight (g) | Avg. Length (cm) |  
-|-------------|--------------------|-----------------|------------------|
-| Blue Java   | 2.52               | 164.62          | 20.75            |
-| Burro       | 2.51               | 164.90          | 20.41            |
-| Cavendish   | 2.43               | 170.63          | 18.85            |
-| Fehi        | 2.43               | 156.17          | 19.87            |
-| Lady Finger | 2.53               | 162.80          | 19.57            |
-| Manzano     | 2.39               | 168.34          | 20.90            |
-| Plantain    | 2.46               | 166.04          | 18.93            |
-| Red Dacca   | 2.45               | 164.43          | 20.15            |
 
 - It was discovered that the quality score of a banana is correlated to the length, sugar content, and ripness index.
 - The ripeness of a banana can be categorized by the ripeness index and is shown in the table below
